@@ -1,0 +1,8 @@
+ldf18b.ranvar       # name of the file containing all the parameter realizations
+LF18diff.pst  		# base PST control file
+polygon				# method: 'polygon' or 'element'
+LF18diff-plume.out  # output filename
+LF18DIFF.PTH		# name of GFLOW path file (will be forced to upper case)
+LF18diff.dat		# name of GFLOW dat file
+Diffuser.csv		# if method==polygon, source file. Else element file
+1.0 				# dtol--> tolerance for the buffer if polygon method
