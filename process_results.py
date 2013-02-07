@@ -20,7 +20,7 @@ def write_lineshapefile(lshape,parts,name,Z):
     lshape.line(parts)    # write to the line shapefile with model coordinates
     lshape.record(name,Z) 
 
-parfile = 'parse_proc.in'
+parfile = sys.argv[1]
 pardat = open(parfile,'r').readlines()
 outfilename = pardat[0].strip().split()[0]
 inPHIfile = pardat[1].strip().split()[0]
