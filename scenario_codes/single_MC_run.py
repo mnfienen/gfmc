@@ -13,8 +13,8 @@ namfile = sys.argv[2]
 # set input variables here
 indat = open(namfile,'r').readlines()
 
-real_file = indat[0].strip().split()[0]     # name of the file containing all the realizations
-pst_file = indat[1].strip().split()[0]    # base PST control file
+real_file = indat[1].strip().split('#')[0].split('=')[1].strip()     # name of the file containing all the realizations
+pst_file = indat[2].strip().split('#')[0].split('=')[1].strip()    # base PST control file
 MC_root = 'MC_'                 # root name for the output PST files
 
 #

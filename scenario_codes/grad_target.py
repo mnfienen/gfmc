@@ -14,8 +14,8 @@ HIGH1 = 'TP_000097'
 LOW1 = 'TP_000098'
 
 namdat = open(namfile,'r').readlines()
-outfilename = namdat[3].strip().split()[0]
-xtrfilename = namdat[4].strip().split()[0].upper()
+outfilename = namdat[0].strip().split()[0]
+xtrfilename = namdat[1].strip().split()[0].upper()
 output_file = open(outfilename,'w')
 
 # read in the entire XTR file

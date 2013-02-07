@@ -5,12 +5,12 @@ mpl.rcParams['pdf.fonttype'] = 42
 import matplotlib.pyplot as plt
 import sys
 
-numreals = 1000
+numreals = 5000
 parfile = 'parse_proc.in'
 pardat = open(parfile,'r').readlines()
 outfilename = pardat[0].strip().split()[0]
 
-uncompress_flag = False
+uncompress_flag = True
 os.chdir('results')
 # uncompress all the output files and rename the .out file
 if uncompress_flag:
@@ -43,13 +43,13 @@ allCONV = np.array(allCONV,dtype=bool)
 plt.figure()
 plt.hist(allPHI[np.where(~np.isnan(allPHI))],bins=200)
 plt.title('Histogram for PHI')
-plt.savefig('PHI_hist.pdf')
+plt.savefig(outfilename + 'PHI_hist.pdf')
 
 plt.figure()
 PHI_sort_norm = np.sort(allPHI[np.where(~np.isnan(allPHI))])/np.max(allPHI[np.where(~np.isnan(allPHI))])
 plt.plot(PHI_sort_norm)
 plt.title('Empirical CDF for PHI')
-plt.savefig('PHI_CDF')
+plt.savefig(outfilename + 'PHI_CDF.pdf')
 
 # truncate allPHI
 medianPHI = np.median(allPHI)
@@ -69,20 +69,20 @@ allPHItrimmed = allPHI[np.where(~np.isnan(allPHI))]
 plt.figure()
 plt.hist(allPHItrimmed,bins=100)
 plt.title('Histogram for PHI')
-plt.savefig('PHI_hist_trimmed.pdf')
+plt.savefig(outfilename + 'PHI_hist_trimmed.pdf')
 
 plt.figure()
 PHI_sort_norm = np.sort(allPHItrimmed)/np.max(allPHItrimmed)
 plt.plot(PHI_sort_norm)
 plt.title('Empirical CDF for trimmed PHI')
-plt.savefig('PHI_CDF_trimmed.pdf')
+plt.savefig(outfilename + 'PHI_CDF_trimmed.pdf')
 
 
 # look at mass balance
 plt.figure()
 plt.hist(allCONV,bins=2)
 plt.title('Histogram for Convergence')
-plt.savefig('CONV_hist.pdf')
+plt.savefig(outfilename + 'CONV_hist.pdf')
 
 
 #plt.show()
