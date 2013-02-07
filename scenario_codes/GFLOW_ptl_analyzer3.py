@@ -222,7 +222,7 @@ if method == 1:
 		pshape = shapefile.Writer(shapefile.POINT)        #set up the point output shapefile
 		pshape.field('In_Out')
 	else: pshape = -999
-	Endpt_outstring = '      X       ' + '      Y     ' + '  In/Out ' + ' Time ' + '\n' 
+	Endpt_outstring = '      X       ' + '      Y     ' + '  In/Out' + '\n' 
 	output_file.write(Endpt_outstring)    # write to the output files 	
 	GFL.perform_endpoint_analysis(yes_no,output_file,pshape,acrwells,PCOORDstr,PCOORDend,Pelement,Ptime)
 
@@ -232,15 +232,15 @@ if (method == 2 or method == 4):
 		lshape.field('Linesink ID')	
 		lshape.field('In_Out')	
 	else: lshape = -999
-	Endpt_outstring = ('      X1      ' + '       Y1      ' + '      X2      ' + '       Y2      ' 
-                           + ' Linesink ID '+ '    In/Out    ' + '\n')
+	Endpt_outstring = ('      X1      ' + '       Y1      ' + '         X2      ' + '         Y2      ' 
+                           + '  In/Out' + '\n')
 	eleoutput_file.write(Endpt_outstring)    # write to the output files 		
 	if len(wells) > 0:
 		if shapefiles_imported == True:		
 			pshape = shapefile.Writer(shapefile.POINT)        #set up the point output shapefile
 			pshape.field('In_Out')	
 		else: pshape = -999
-		wellpt_outstring = ('      X      ' + '       Y      ' + '   Well ID '+ '  In/Out    ' + '\n')
+		wellpt_outstring = ('      X      ' + '         Y      ' + '   In/Out' + '\n')
 		welloutput_file.write(wellpt_outstring)    # write to the output files 
 		GFL.perform_terminal_element_analysis(yes_no,eleoutput_file,welloutput_file,lshape,pshape,linesinks,wells,PCOORDend,Pelement)
 	else:	
@@ -254,7 +254,7 @@ if (method >= 3):
 		nodeshape = shapefile.Writer(shapefile.POINT)        #set up the point output shapefile
 		nodeshape.field('In_Out')	
 	else: nodeshape = -999
-	node_outstring = ('      X      ' + '       Y      ' + '    In/Out    ' + '\n')
+	node_outstring = ('      X      ' + '         Y      ' + '  In/Out' + '\n')
 	gridoutput_file.write(node_outstring)    # write to the output files 	
 	GFL.write_flowpaths_to_nodes(yes_no,gridoutput_file,nodeshape,nodes,Z)
 

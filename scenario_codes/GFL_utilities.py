@@ -1,6 +1,6 @@
 import numpy as np
 import math
-#import shapefile
+
 
 # ###########################
 # GFLOW dat file info block #
@@ -24,6 +24,12 @@ def get_model_origin(datfilename): # reads *.dat file and returns X and Y of mod
 # ###########################
 # Element file info block   #
 # ###########################
+# generate a list of the elements from a file listing the elements of interest (eg: wells for ZOC)
+def get_acrwells(well_file):
+	wells = []
+	for well in well_file:
+		wells.append(well.strip('\n'))    # need to strip the \n off of the matchelement
+	return (wells)
 
 # Check the element type
 def checkelement(LS_line):
@@ -39,13 +45,6 @@ def checkelement(LS_line):
 				try: coord = float(LS_line[5])
 				except: return 'non-routed'
 				else: print ('\n\nThere was a problem parsing the Element file. \n')
-
-# generate a list of the elements from a file listing the elements of interest (eg: wells for ZOC)
-def get_acrwells(well_file):
-	wells = []
-	for well in well_file:
-		wells.append(well.strip('\n'))    # need to strip the \n off of the matchelement
-	return (wells)
 
 # Generate a list of well and linesink elements (returns 2 lists) with X,Y coordinates for terminal element evaluation. 
 # Note: the element file for "get_terminal_elements" contains more information (X,Y) than the file for "get_elements"
@@ -208,7 +207,7 @@ def perform_endpoint_analysis(yes_no,output_file,pshape,acrwells,PCOORDstr,PCOOR
 	for i, coord in enumerate (PCOORDstr[:]):
 		X = coord[0]
 		Y = coord[1]    
-		Endpt_outstring = str(X) + ', ' + str(Y) + ', ' + str(Z[i]) + ', ' + str(Ptime[i]) + '\n' 
+		Endpt_outstring = '%-16.5f %-16.5f %d\n' %(X,Y,Z[i])
 		output_file.write(Endpt_outstring)
 		if pshape <> -999 and yes_no == 'yes':
 			write_pointshapefile(pshape,coord,Z[i]) #passes 3 variables to the point shapefile definition
@@ -228,8 +227,7 @@ def perform_terminal_linesink_analysis(yes_no,eleoutput_file,lshape,linesinks,PC
 		X2 = float(line[2])
 		Y2 = float(line[3])
 		name = line[4]
-		Endpt_outstring = (str(X1) + ', ' + str(Y1) + ', ' + str(X2) + ', ' + str(Y2) + ', '
-	        + name +', ' + str(Z[i]) + '\n')
+		Endpt_outstring = '%-16.5f %-16.5f %-16.5f %-16.5f %d\n' %(X1,Y1,X2,Y2,Z[i])
 		eleoutput_file.write(Endpt_outstring)    # write to the output files 
 		if lshape <> -999 and yes_no == 'yes':
 			parts = [[[X1,Y1],[X2,Y2]]]
@@ -248,8 +246,7 @@ def perform_terminal_element_analysis(yes_no,eleoutput_file,welloutput_file,lsha
 		X1 = float(line[0])
 		Y1 = float(line[1])
 		name = line[2]
-		wellpt_outstring = (str(X1) + ', ' + str(Y1) + ', '
-	        + name +', ' + str(W[i]) + '\n')
+		wellpt_outstring = '%-16.5f %-16.5f %d\n' %(X1,Y1,W[i])
 		welloutput_file.write(wellpt_outstring)    # write to the output files 
 		if pshape <> -999 and yes_no == 'yes':
 			parts = [X1,Y1]
