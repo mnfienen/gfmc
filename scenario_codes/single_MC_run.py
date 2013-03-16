@@ -11,7 +11,12 @@ sel_real = int(sys.argv[1])
 namfile = sys.argv[2]
 
 # set input variables here
-indat = open(namfile,'r').readlines()
+tmp = open(namfile,'r').readlines()
+
+indat = []
+for line in tmp:
+	if line.lstrip()[0] != '#':
+		indat.append(line)
 
 real_file = indat[1].strip().split('#')[0].split('=')[1].strip()     # name of the file containing all the realizations
 pst_file = indat[2].strip().split('#')[0].split('=')[1].strip()    # base PST control file
