@@ -4,13 +4,18 @@ import os, shutil, re, glob
 #scenarios = ['LdF_West_future','LdF_LGBK_OTB','LdF_Main_current',
 #             'LdF_Main_future','LdF_SE_OTB','LdF_Diff_OTB','LdF_West_current']
 
-scenarios = ['SWlag_forward','NElag_forward']
-inputfiles = [['SW_els.in','SW_pts.in'],
-			['NE_els.in','NE_pts.in']]
+# the parfile can be made using nam2infiles.py
+parfile = 'big_processor.par'
+
+inputfiles = []
+scenarios = []
+for line in open(parfile,'r').readlines():
+    scenarios.append(line.strip().split()[0])
+    inputfiles.append(line.strip().split()[1:])
 
 
-prep_delete = False
-pull_files = False
+prep_delete = True
+pull_files = True
 parse_and_proc = True
 
 # first remove the contents of all the scenario results files
@@ -37,7 +42,7 @@ if pull_files:
         localdir = re.sub('LdF_','',cscen)
         cpath = os.path.join(os.getcwd(),localdir)
         print 'retrieving files from %s' %(cscen)
-        os.system('scp mnfienen@igsarmewfsM000.er.usgs.gov:%s/results/* %s' %(cscen,os.path.join(cpath,'results')))
+        os.system('scp mnfienen@igsarmewfsM000.er.usgs.gov:MONTE_CARLO_3_2013/%s/results/* %s' %(cscen,os.path.join(cpath,'results')))
 # now run the processing 
 if parse_and_proc:
     homedir = os.getcwd()
