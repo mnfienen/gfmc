@@ -5,7 +5,7 @@ mpl.rcParams['pdf.fonttype'] = 42
 import matplotlib.pyplot as plt
 import sys
 
-numreals = 1500
+numreals = 1200
 parfile = sys.argv[1]
 pardat = open(parfile,'r').readlines()
 outfilename = pardat[0].strip().split()[0]

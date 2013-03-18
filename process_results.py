@@ -88,7 +88,7 @@ else:
     Y2 = list()
     ElName = list()
     for i,line in enumerate(indat):
-        tmp = line.strip().split(',')
+        tmp = line.strip().split()
         X1.append(float(tmp[0].strip()))
         X2.append(float(tmp[2].strip()))
         Y1.append(float(tmp[1].strip()))                        
