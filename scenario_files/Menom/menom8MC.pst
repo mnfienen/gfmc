@@ -893,7 +893,7 @@ MB_error	0.0		0.0		Error
 menom8.bat
 * model input/output
 par2par_menom8mc.tpl par2par_menom8.dat
-menom8.ins menom8.XTR
+menom8.ins menom8.xtr
 flux_gains.ins menom8_fluxgain.out
 MB_error.ins MB_error.out
 
