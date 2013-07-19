@@ -59,7 +59,7 @@ class KeyFail(Exception):
 		       'The offending keyword was:\n' +
 		       '"' + self.key + '"')	
 	
-# -- Failure with keywords for the Mode in the name file
+# -- Failure with keywords for writing shapefiles in the name file
 class YesFail(Exception):
 	def __init__(self,key):
 		self.key = key
@@ -98,8 +98,9 @@ varnames = []
 vals = []
 for eachline in lines:
 	lineinfo = eachline.split('#')[0].split('=') # splits by = on the left tuple
-	varnames.append(lineinfo[0].strip().lower()) # assign variable name after strip whitespace and ensure lower case
-	vals.append(lineinfo[1].strip()) # assign variable
+	if len(lineinfo) > 1: # allows comments to be placed anywhere in the file following a #	
+		varnames.append(lineinfo[0].strip().lower()) # assign variable name after strip whitespace and ensure lower case
+		vals.append(lineinfo[1].strip()) # assign variable
 allin = dict(zip(varnames,vals)) # construct dictionary of keywords and variables from NAM file.
 
 match = False
