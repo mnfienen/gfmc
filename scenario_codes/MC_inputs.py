@@ -94,7 +94,7 @@ def MC_PST(real_file,pst_file,MC_root,sel_real):
 	for line in tied_pars_2:
 	    for cv in line:
 		ofp.write('%s ' %(cv))
-	ofp.write('\n')
+	    ofp.write('\n')
     # end with the footer
     for line in footer:
         ofp.write(line.strip() + '\n')
