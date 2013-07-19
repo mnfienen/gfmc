@@ -1,0 +1,2187 @@
+                     PEST RUN RECORD: CASE menom8_sens
+
+
+ BEOPEST Version: 12.3.1
+
+
+ PEST run mode:-
+
+    Parameter estimation mode
+
+
+ Case dimensions:-
+
+    Number of parameters                           :    29
+    Number of adjustable parameters                :    10
+    Number of parameter groups                     :     5
+    Number of observations                         :   821
+    Number of prior estimates                      :     0
+
+
+ Model command line(s):-
+ 
+    menom8.bat
+
+
+ Jacobian command line:-
+
+    na
+
+
+ Model interface files:-
+
+    Templates:
+       par2par_menom8.tpl
+    for model input files:
+       par2par_menom8.DAT
+
+    (Parameter values written using double precision protocol.)
+    (Decimal point always included.)
+
+    Instruction files:
+       menom8.ins
+       flux_gains.ins
+       MB_error.ins
+    for reading model output files:
+       menom8.XTR
+       menom8_fluxgain.out
+       MB_error.out
+
+
+ PEST-to-model message file:-
+
+    na
+
+
+ Derivatives calculation:-
+
+ Param        Increment   Increment   Increment   Forward or   Multiplier  Method
+ group        type                    low bound   central      (central)   (central)
+ kh           relative    1.0000E-02   none         switch       2.000     parabolic
+ base         relative    1.0000E-02   none         switch       2.000     parabolic
+ khi          relative    1.0000E-02   none         switch       2.000     parabolic
+ rch          relative    1.0000E-02   none         switch       2.000     parabolic
+ res          relative    1.0000E-02   none         switch       2.000     parabolic
+
+
+ Parameter definitions:-
+
+ Name         Trans-            Change       Initial        Lower          Upper
+              formation         limit        value          bound          bound
+ kglobal_____ log               factor      2.92317       0.100000        60.0000    
+ bglobal_____ fixed               na        500.000          na             na
+ knorthwest__ log               factor      4.60947       0.100000        100.000    
+ bnorthwest__ fixed               na        600.000          na             na
+ headnorthwst fixed               na        1400.00          na             na
+ koutwash____ log               factor      8.00079       0.100000        300.000    
+ boutwash____ fixed               na        400.000          na             na
+ headoutwash_ fixed               na        900.000          na             na
+ kantigo_mult none              factor      1.50596        1.00000        20.0000    
+ k_endmoraine log               factor      12.3143       0.500000        200.000    
+ kbluffa_____ tied kgrmoraine__   na       0.512445          na             na
+ kbluffb_____ tied kglobal_____   na        2.92317          na             na
+ kgrmoraine__ log               factor     0.512445       0.100000        200.000    
+ kmorgana____ tied kgrmoraine__   na       0.512445          na             na
+ kmorganb____ tied kgrmoraine__   na       0.512445          na             na
+ kmorganc1___ tied kgrmoraine__   na       0.512445          na             na
+ kmorganc2___ tied kgrmoraine__   na       0.512445          na             na
+ knkeshena___ tied kgrmoraine__   na       0.512445          na             na
+ kskeshena___ tied kgrmoraine__   na       0.512445          na             na
+ kredspringsa tied kgrmoraine__   na       0.512445          na             na
+ kredspringsb tied kgrmoraine__   na       0.512445          na             na
+ kzoar_______ tied knorthwest__   na        4.60947          na             na
+ bzoar_______ fixed               na        1100.00          na             na
+ headzoar____ fixed               na        1180.00          na             na
+ rregional___ none              factor      1.92449       0.228310        22.8310    
+ p-e_________ fixed               na        4.56300          na             na
+ cdrainage___ log               factor      1.00000       0.100000        10.0000    
+ cseepage____ log               factor      10.0000        1.00000        100.000    
+ cstream_____ log               factor     0.500000       5.000000E-02    5.00000    
+
+ Name         Group          Scale         Offset        Model command number
+ kglobal_____ kh            1.00000        0.00000            1
+ bglobal_____ base          1.00000        0.00000            1
+ knorthwest__ kh            1.00000        0.00000            1
+ bnorthwest__ base          1.00000        0.00000            1
+ headnorthwst base          1.00000        0.00000            1
+ koutwash____ kh            1.00000        0.00000            1
+ boutwash____ base          1.00000        0.00000            1
+ headoutwash_ base          1.00000        0.00000            1
+ kantigo_mult khi           1.00000        0.00000            1
+ k_endmoraine khi           1.00000        0.00000            1
+ kbluffa_____ khi           1.00000        0.00000            1
+ kbluffb_____ khi           1.00000        0.00000            1
+ kgrmoraine__ khi           1.00000        0.00000            1
+ kmorgana____ khi           1.00000        0.00000            1
+ kmorganb____ khi           1.00000        0.00000            1
+ kmorganc1___ khi           1.00000        0.00000            1
+ kmorganc2___ khi           1.00000        0.00000            1
+ knkeshena___ khi           1.00000        0.00000            1
+ kskeshena___ khi           1.00000        0.00000            1
+ kredspringsa khi           1.00000        0.00000            1
+ kredspringsb khi           1.00000        0.00000            1
+ kzoar_______ khi           1.00000        0.00000            1
+ bzoar_______ base          1.00000        0.00000            1
+ headzoar____ base          1.00000        0.00000            1
+ rregional___ rch         -1.000000E-03    0.00000            1
+ p-e_________ rch          1.000000E-04    0.00000            1
+ cdrainage___ res           1.00000        0.00000            1
+ cseepage____ res           1.00000        0.00000            1
+ cstream_____ res           1.00000        0.00000            1
+
+
+ Prior information:-
+
+    No prior information supplied
+
+
+ Observations:-
+
+ Observation name        Observation       Weight       Group
+  gwobs_445333088451      953.120          1.200       obs_network 
+  gwobs_445052088552      1008.61          1.200       obs_network 
+  gwobs_445556089045      1227.90          1.200       obs_network 
+  gwobs_450242089065      1381.08          1.200       obs_network 
+  gwobs_450705089020      1420.17          1.200       obs_network 
+  neopita                 1086.20         0.3920       obs_wells   
+  neopitd                 1074.70         0.3920       obs_wells   
+  neopite                 1110.30         0.3920       obs_wells   
+  neopitf                 1115.20         0.3920       obs_wells   
+  neopitg                 1052.90         0.3920       obs_wells   
+  neopith                 1090.70         0.3920       obs_wells   
+  neopiti                 1053.70         0.3920       obs_wells   
+  neopitj                 1081.60         0.3920       obs_wells   
+  neopitk                 1107.00         0.3920       obs_wells   
+  neopitl                 1057.00         0.3920       obs_wells   
+  neopitn                 1090.00         0.3920       obs_wells   
+  neopito                 1065.60         0.3920       obs_wells   
+  neopitp                 1054.20         0.3920       obs_wells   
+  neo05                   1053.80         0.3920       obs_wells   
+  neo08                   1080.20         0.3920       obs_wells   
+  neo10                   1082.40         0.3920       obs_wells   
+  neo11                   1093.40         0.3920       obs_wells   
+  neo13                   1087.10         0.3920       obs_wells   
+  neo_test_well1          1077.70         0.3920       obs_wells   
+  neo_test_well2          1080.90         0.3920       obs_wells   
+  neo_test_well3          1078.30         0.3920       obs_wells   
+  neo_b1                  1103.20         0.3920       obs_wells   
+  neo_b2                  1091.50         0.3920       obs_wells   
+  neo_b3                  1058.80         0.3920       obs_wells   
+  neo_b4                  1041.50         0.3920       obs_wells   
+  ke12                    853.300         0.3920       obs_wells   
+  ke2                     869.100         0.3920       obs_wells   
+  ke3                     836.100         0.3920       obs_wells   
+  ke4                     870.000         0.3920       obs_wells   
+  ke5                     852.900         0.3920       obs_wells   
+  ke6                     856.200         0.3920       obs_wells   
+  ke7                     825.900         0.3920       obs_wells   
+  ke9                     886.600         0.3920       obs_wells   
+  me-0024                 1295.10         0.3920       obs_wells   
+  me-0026                 1260.70         0.3920       obs_wells   
+  me-0140                 1312.30         0.3920       obs_wells   
+  me-0141                 1225.60         0.3920       obs_wells   
+  me-0142                 1158.20         0.3920       obs_wells   
+  mw1                     958.740         0.3920       obs_wells   
+  mw10                    937.280         0.3920       obs_wells   
+  mw11                    938.150         0.3920       obs_wells   
+  mw12                    935.720         0.3920       obs_wells   
+  mw14                    926.480         0.3920       obs_wells   
+  mw15                    918.520         0.3920       obs_wells   
+  mw16                    927.330         0.3920       obs_wells   
+  mw2                     948.630         0.3920       obs_wells   
+  mw21                    945.840         0.3920       obs_wells   
+  mw22                    956.450         0.3920       obs_wells   
+  mw23                    975.700         0.3920       obs_wells   
+  mw24                    953.610         0.3920       obs_wells   
+  mw25                    955.930         0.3920       obs_wells   
+  mw3                     956.910         0.3920       obs_wells   
+  mw33                    958.600         0.3920       obs_wells   
+  mw34                    947.300         0.3920       obs_wells   
+  mw35                    937.700         0.3920       obs_wells   
+  mw39                    944.000         0.3920       obs_wells   
+  mw41                    978.500         0.3920       obs_wells   
+  mw42                    981.500         0.3920       obs_wells   
+  mw43                    974.500         0.3920       obs_wells   
+  mw44                    978.600         0.3920       obs_wells   
+  mw45                    983.850         0.3920       obs_wells   
+  mw46                    978.550         0.3920       obs_wells   
+  mw5                     957.660         0.3920       obs_wells   
+  mw6                     956.330         0.3920       obs_wells   
+  mw7                     952.850         0.3920       obs_wells   
+  mw8                     941.860         0.3920       obs_wells   
+  mw9                     940.770         0.3920       obs_wells   
+  sh-0043                 1069.00         0.3920       obs_wells   
+  sh-0044                 1073.00         0.3920       obs_wells   
+  sh-0084                 1077.00         0.3920       obs_wells   
+  sh-0085                 1105.00         0.3920       obs_wells   
+  sh-0090                 1105.00         0.3920       obs_wells   
+  sh-0109                 1091.00         0.3920       obs_wells   
+  sh-0115                 1075.00         0.3920       obs_wells   
+  sh-0120                 1096.20         0.3920       obs_wells   
+  sh-0121                 1055.00         0.3920       obs_wells   
+  sh-0131                 1075.00         0.3920       obs_wells   
+  sh-0156                 1093.00         0.3920       obs_wells   
+  sh-0158                 1094.00         0.3920       obs_wells   
+  sh-0167                 1105.00         0.3920       obs_wells   
+  sh-0184                 1027.00         0.3920       obs_wells   
+  sh-0208                 1077.40         0.3920       obs_wells   
+  uv249_fair              826.000         9.0000E-02   wcrs        
+  uv205_fair              830.110         9.0000E-02   wcrs        
+  uh999_fair              829.450         9.0000E-02   wcrs        
+  vb071_fair              831.000         9.0000E-02   wcrs        
+  uv204_fair              832.000         9.0000E-02   wcrs        
+  wo620_good              840.630         0.1400       wcrs        
+  tv629_good              827.450         0.1400       wcrs        
+  uh950_fair              839.080         9.0000E-02   wcrs        
+  uh977_fair              843.440         9.0000E-02   wcrs        
+  uz318_fair              824.640         9.0000E-02   wcrs        
+  uv221_fair              835.000         9.0000E-02   wcrs        
+  wn720_good              844.000         0.1400       wcrs        
+  wk631_good              834.920         0.1400       wcrs        
+  wp965_good              844.500         0.1400       wcrs        
+  up466_fair              848.980         9.0000E-02   wcrs        
+  uj605_fair              835.430         9.0000E-02   wcrs        
+  wk595_good              838.130         0.1400       wcrs        
+  up499_fair              838.280         9.0000E-02   wcrs        
+  uv239_fair              836.710         9.0000E-02   wcrs        
+  uv246_fair              843.960         9.0000E-02   wcrs        
+  uh918_fair              845.100         9.0000E-02   wcrs        
+  uh916_fair              840.720         9.0000E-02   wcrs        
+  uv233_fair              845.000         9.0000E-02   wcrs        
+  vb076_fair              852.000         9.0000E-02   wcrs        
+  ub703_fair              833.410         9.0000E-02   wcrs        
+  uv226_fair              835.030         9.0000E-02   wcrs        
+  uv227_fair              864.150         9.0000E-02   wcrs        
+  uh949_fair              837.800         9.0000E-02   wcrs        
+  uh970_fair              842.650         9.0000E-02   wcrs        
+  wj253_good              840.000         0.1400       wcrs        
+  uj660_fair              855.630         9.0000E-02   wcrs        
+  uj626_fair              834.080         9.0000E-02   wcrs        
+  uj612_fair              830.000         9.0000E-02   wcrs        
+  uo535_fair              843.190         9.0000E-02   wcrs        
+  ub687_fair              843.000         9.0000E-02   wcrs        
+  vb054_fair              844.000         9.0000E-02   wcrs        
+  up457_fair              847.950         9.0000E-02   wcrs        
+  up467_fair              840.600         9.0000E-02   wcrs        
+  uj683_fair              851.000         9.0000E-02   wcrs        
+  ub699_fair              853.000         9.0000E-02   wcrs        
+  uv206_fair              844.000         9.0000E-02   wcrs        
+  ub711_fair              847.000         9.0000E-02   wcrs        
+  uv234_fair              844.340         9.0000E-02   wcrs        
+  uv244_fair              833.900         9.0000E-02   wcrs        
+  uh985_fair              847.000         9.0000E-02   wcrs        
+  up493_fair              849.680         9.0000E-02   wcrs        
+  uh935_fair              847.000         9.0000E-02   wcrs        
+  uj673_fair              877.440         9.0000E-02   wcrs        
+  uv224_fair              869.370         9.0000E-02   wcrs        
+  uz311_fair              872.050         9.0000E-02   wcrs        
+  uv247_fair              909.210         9.0000E-02   wcrs        
+  uv243_fair              964.000         9.0000E-02   wcrs        
+  wp604_fair              1083.00         9.0000E-02   wcrs        
+  wp598_fair              1079.00         9.0000E-02   wcrs        
+  wo958_fair              1078.96         9.0000E-02   wcrs        
+  wp603_fair              1082.00         9.0000E-02   wcrs        
+  wo957_fair              1075.93         9.0000E-02   wcrs        
+  ub700_fair              932.330         9.0000E-02   wcrs        
+  su027_fair              1281.15         9.0000E-02   wcrs        
+  uu011_good              1271.69         0.1400       wcrs        
+  uu039_good              1285.16         0.1400       wcrs        
+  tc915_fair              1364.30         9.0000E-02   wcrs        
+  rq683_fair              1329.00         9.0000E-02   wcrs        
+  nk035_fair              1353.48         9.0000E-02   wcrs        
+  or014_fair              1250.38         9.0000E-02   wcrs        
+  fd439_verygood          1287.49         0.1800       wcrs        
+  gm004_fair              1272.00         9.0000E-02   wcrs        
+  ut879_good              1380.00         0.1400       wcrs        
+  ut896_good              1379.59         0.1400       wcrs        
+  uu026_good              1393.01         0.1400       wcrs        
+  uu022_good              1327.55         0.1400       wcrs        
+  us611_fair              1425.74         9.0000E-02   wcrs        
+  us610_fair              1425.18         9.0000E-02   wcrs        
+  va125_good              1361.40         0.1400       wcrs        
+  va122_good              1361.73         0.1400       wcrs        
+  iz948_verygood          1459.18         0.1800       wcrs        
+  uu030_good              1431.88         0.1400       wcrs        
+  eg759_verygood          1452.96         0.1800       wcrs        
+  ko028_verygood          1457.23         0.1800       wcrs        
+  ej717_verygood          1455.00         0.1800       wcrs        
+  va108_good              1374.48         0.1400       wcrs        
+  va119_good              1384.89         0.1400       wcrs        
+  up714_fair              1460.00         9.0000E-02   wcrs        
+  vc854_good              1415.02         0.1400       wcrs        
+  gj398_verygood          1469.31         0.1800       wcrs        
+  va129_good              1454.00         0.1400       wcrs        
+  dj772_verygood          1435.18         0.1800       wcrs        
+  va101_good              1451.21         0.1400       wcrs        
+  up713_fair              1461.00         9.0000E-02   wcrs        
+  ut889_good              1461.00         0.1400       wcrs        
+  ej714_verygood          1466.00         0.1800       wcrs        
+  em988_verygood          1463.00         0.1800       wcrs        
+  ut871_good              1394.05         0.1400       wcrs        
+  iz942_verygood          1462.51         0.1800       wcrs        
+  wg737_fair              1464.30         9.0000E-02   wcrs        
+  vc857_fair              1462.00         9.0000E-02   wcrs        
+  ja663_verygood          1072.96         0.1800       wcrs        
+  ja664_good              1069.00         0.1400       wcrs        
+  ja640_verygood          1463.00         0.1800       wcrs        
+  ex794_verygood          1289.24         0.1800       wcrs        
+  ex792_verygood          1289.93         0.1800       wcrs        
+  ex793_verygood          1293.00         0.1800       wcrs        
+  vc869_good              1468.30         0.1400       wcrs        
+  gp145_verygood          1454.81         0.1800       wcrs        
+  ex791_verygood          1270.36         0.1800       wcrs        
+  bp993_verygood          1471.00         0.1800       wcrs        
+  ty605_fair              1238.89         9.0000E-02   wcrs        
+  vl811_fair              1466.00         9.0000E-02   wcrs        
+  us605_fair              1470.00         9.0000E-02   wcrs        
+  uu050_good              1369.59         0.1400       wcrs        
+  ik290_verygood          1437.72         0.1800       wcrs        
+  uu019_good              1468.00         0.1400       wcrs        
+  ut890_fair              1102.61         9.0000E-02   wcrs        
+  uh964_fair              1451.50         9.0000E-02   wcrs        
+  qp729_verygood          1123.12         0.1800       wcrs        
+  up459_fair              1463.75         9.0000E-02   wcrs        
+  ja651_verygood          1136.09         0.1800       wcrs        
+  ro412_verygood          1128.15         0.1800       wcrs        
+  uu037_good              1238.00         0.1400       wcrs        
+  va113_good              1481.00         0.1400       wcrs        
+  up096_fair              1117.24         9.0000E-02   wcrs        
+  uq171_fair              1483.98         9.0000E-02   wcrs        
+  uu003_good              1336.90         0.1400       wcrs        
+  gp147_verygood          1457.84         0.1800       wcrs        
+  bg226_verygood          1480.48         0.1800       wcrs        
+  ar320_verygood          1482.50         0.1800       wcrs        
+  bg221_verygood          1484.00         0.1800       wcrs        
+  bg222_verygood          1482.00         0.1800       wcrs        
+  bg224_verygood          1480.38         0.1800       wcrs        
+  bg228_verygood          1252.29         0.1800       wcrs        
+  uu047_good              1476.45         0.1400       wcrs        
+  gj127_verygood          1183.00         0.1800       wcrs        
+  hq168_fair              1184.06         9.0000E-02   wcrs        
+  mf274_fair              1179.86         9.0000E-02   wcrs        
+  id800_verygood          1178.01         0.1800       wcrs        
+  uu010_fair              1283.48         9.0000E-02   wcrs        
+  ej764_verygood          1255.06         0.1800       wcrs        
+  gp148_verygood          1499.58         0.1800       wcrs        
+  uu014_good              1477.00         0.1400       wcrs        
+  ty631_fair              1494.00         9.0000E-02   wcrs        
+  uu040_good              1501.00         0.1400       wcrs        
+  at093_verygood          1500.00         0.1800       wcrs        
+  bg225_verygood          1503.43         0.1800       wcrs        
+  du688_fair              1477.72         9.0000E-02   wcrs        
+  gq649_verygood          1339.95         0.1800       wcrs        
+  nz713_verygood          1476.92         0.1800       wcrs        
+  fd434_verygood          1363.00         0.1800       wcrs        
+  va114_good              1473.47         0.1400       wcrs        
+  ej725_verygood          1376.63         0.1800       wcrs        
+  cr050_verygood          1481.00         0.1800       wcrs        
+  iz944_good              1506.00         0.1400       wcrs        
+  nn547_verygood          1503.50         0.1800       wcrs        
+  ko048_verygood          1290.45         0.1800       wcrs        
+  fd370_verygood          1294.00         0.1800       wcrs        
+  us649_fair              1511.00         9.0000E-02   wcrs        
+  ut900_good              1507.17         0.1400       wcrs        
+  fj046_verygood          1514.00         0.1800       wcrs        
+  uu032_good              1501.00         0.1400       wcrs        
+  vc870_good              1284.60         0.1400       wcrs        
+  gs769_good              1241.76         0.1400       wcrs        
+  tb470_fair              1513.00         9.0000E-02   wcrs        
+  ty580_fair              1514.00         9.0000E-02   wcrs        
+  eg751_verygood          1238.51         0.1800       wcrs        
+  ec280_verygood          1250.22         0.1800       wcrs        
+  uu038_good              1255.87         0.1400       wcrs        
+  ja662_verygood          1242.83         0.1800       wcrs        
+  te256_fair              1521.00         9.0000E-02   wcrs        
+  ty619_fair              1514.35         9.0000E-02   wcrs        
+  tb469_fair              1505.70         9.0000E-02   wcrs        
+  ov130_verygood          1517.00         0.1800       wcrs        
+  ul677_fair              1524.00         9.0000E-02   wcrs        
+  tb474_fair              1527.00         9.0000E-02   wcrs        
+  uj782_fair              1519.00         9.0000E-02   wcrs        
+  ut856_good              1524.00         0.1400       wcrs        
+  gp451_verygood          1530.00         0.1800       wcrs        
+  va124_good              1530.00         0.1400       wcrs        
+  ty632_fair              1533.00         9.0000E-02   wcrs        
+  tb477_fair              1535.00         9.0000E-02   wcrs        
+  us650_fair              1532.00         9.0000E-02   wcrs        
+  rr300_fair              1325.57         9.0000E-02   wcrs        
+  qt130_verygood          1351.92         0.1800       wcrs        
+  us615_fair              1538.00         9.0000E-02   wcrs        
+  va127_good              1540.47         0.1400       wcrs        
+  ty645_fair              1539.00         9.0000E-02   wcrs        
+  uu028_good              1369.46         0.1400       wcrs        
+  tw556_good              1355.29         0.1400       wcrs        
+  dw054_verygood          1357.47         0.1800       wcrs        
+  uu024_good              1386.63         0.1400       wcrs        
+  vc865_good              1397.00         0.1400       wcrs        
+  vc855_good              1439.00         0.1400       wcrs        
+  ef260_fair              1509.06         9.0000E-02   wcrs        
+  vb055_fair              839.260         9.0000E-02   wcrs        
+  uv214_fair              838.000         9.0000E-02   wcrs        
+  uj667_fair              826.640         9.0000E-02   wcrs        
+  jc085_verygood          833.400         0.1800       wcrs        
+  uj670_fair              837.330         9.0000E-02   wcrs        
+  jc086_verygood          835.410         0.1800       wcrs        
+  vb056_fair              842.860         9.0000E-02   wcrs        
+  vb069_fair              840.280         9.0000E-02   wcrs        
+  vb073_fair              832.900         9.0000E-02   wcrs        
+  jc087_verygood          840.000         0.1800       wcrs        
+  tm253_fair              838.240         9.0000E-02   wcrs        
+  tm237_fair              801.990         9.0000E-02   wcrs        
+  uj650_fair              825.940         9.0000E-02   wcrs        
+  uj665_fair              830.690         9.0000E-02   wcrs        
+  uj689_fair              831.520         9.0000E-02   wcrs        
+  jc083_verygood          810.000         0.1800       wcrs        
+  ut602_fair              829.000         9.0000E-02   wcrs        
+  up498_fair              850.540         9.0000E-02   wcrs        
+  tw583_good              834.370         0.1400       wcrs        
+  up464_fair              838.930         9.0000E-02   wcrs        
+  jc102_verygood          848.470         0.1800       wcrs        
+  bp209_fair              835.000         9.0000E-02   wcrs        
+  uj654_fair              859.810         9.0000E-02   wcrs        
+  wo296_good              829.820         0.1400       wcrs        
+  tw565_good              855.000         0.1400       wcrs        
+  wn189_good              851.690         0.1400       wcrs        
+  jc113_verygood          868.000         0.1800       wcrs        
+  uj640_fair              834.590         9.0000E-02   wcrs        
+  jc112_verygood          886.360         0.1800       wcrs        
+  id719_verygood          876.000         0.1800       wcrs        
+  jc114_verygood          865.590         0.1800       wcrs        
+  jc835_verygood          1104.67         0.1800       wcrs        
+  jc788_verygood          1098.64         0.1800       wcrs        
+  jc838_verygood          1107.94         0.1800       wcrs        
+  jc837_verygood          1104.37         0.1800       wcrs        
+  jc789_verygood          1107.92         0.1800       wcrs        
+  jc836_verygood          1105.47         0.1800       wcrs        
+  uj629_fair              1026.49         9.0000E-02   wcrs        
+  jc840_verygood          1131.31         0.1800       wcrs        
+  jc222_verygood          1102.35         0.1800       wcrs        
+  jc839_verygood          1076.18         0.1800       wcrs        
+  jc223_verygood          1103.67         0.1800       wcrs        
+  tw584_good              1111.04         0.1400       wcrs        
+  jc310_verygood          1141.12         0.1800       wcrs        
+  wn446_good              1179.19         0.1400       wcrs        
+  wj248_good              1167.21         0.1400       wcrs        
+  wn447_good              1058.86         0.1400       wcrs        
+  uj688_fair              1158.94         9.0000E-02   wcrs        
+  uj666_fair              1167.61         9.0000E-02   wcrs        
+  uu872_fair              1199.00         9.0000E-02   wcrs        
+  jc231_verygood          1163.00         0.1800       wcrs        
+  wo295_good              1234.54         0.1400       wcrs        
+  wk195_good              1194.75         0.1400       wcrs        
+  uj652_fair              1213.67         9.0000E-02   wcrs        
+  wn443_good              1184.57         0.1400       wcrs        
+  uk465_good              1183.64         0.1400       wcrs        
+  jc842_verygood          1309.08         0.1800       wcrs        
+  uj653_fair              1179.00         9.0000E-02   wcrs        
+  jc841_verygood          1308.00         0.1800       wcrs        
+  ja970_verygood          1292.08         0.1800       wcrs        
+  jc232_verygood          1199.66         0.1800       wcrs        
+  jc233_verygood          1204.01         0.1800       wcrs        
+  va234_fair              1275.19         9.0000E-02   wcrs        
+  jc236_verygood          1234.52         0.1800       wcrs        
+  jc308_verygood          1325.00         0.1800       wcrs        
+  uo974_fair              1345.83         9.0000E-02   wcrs        
+  wj868_good              1290.37         0.1400       wcrs        
+  bp290_verygood          843.000         0.1800       wcrs        
+  jc326_verygood          859.180         0.1800       wcrs        
+  jc325_verygood          841.300         0.1800       wcrs        
+  tm242_fair              814.180         9.0000E-02   wcrs        
+  wm405_good              804.600         0.1400       wcrs        
+  ib715_verygood          925.970         0.1800       wcrs        
+  up462_fair              795.250         9.0000E-02   wcrs        
+  up472_fair              859.000         9.0000E-02   wcrs        
+  uh969_fair              825.020         9.0000E-02   wcrs        
+  uh936_fair              821.660         9.0000E-02   wcrs        
+  wo298_good              817.000         0.1400       wcrs        
+  tm271_fair              824.050         9.0000E-02   wcrs        
+  un427_fair              818.000         9.0000E-02   wcrs        
+  hx722_verygood          828.000         0.1800       wcrs        
+  vb075_fair              835.070         9.0000E-02   wcrs        
+  sb644_fair              825.210         9.0000E-02   wcrs        
+  up497_fair              820.990         9.0000E-02   wcrs        
+  va244_fair              871.000         9.0000E-02   wcrs        
+  ub709_fair              818.980         9.0000E-02   wcrs        
+  jc402_verygood          844.120         0.1800       wcrs        
+  qt193_verygood          851.150         0.1800       wcrs        
+  uh913_fair              962.260         9.0000E-02   wcrs        
+  tm259_fair              825.000         9.0000E-02   wcrs        
+  uj632_fair              843.000         9.0000E-02   wcrs        
+  uv236_fair              898.000         9.0000E-02   wcrs        
+  uj661_fair              828.190         9.0000E-02   wcrs        
+  uj680_fair              834.000         9.0000E-02   wcrs        
+  vb371_fair              954.000         9.0000E-02   wcrs        
+  bg984_verygood          824.920         0.1800       wcrs        
+  wo330_good              830.000         0.1400       wcrs        
+  uz303_fair              811.000         9.0000E-02   wcrs        
+  uh927_fair              876.000         9.0000E-02   wcrs        
+  uz323_fair              854.800         9.0000E-02   wcrs        
+  uh990_fair              818.140         9.0000E-02   wcrs        
+  ub714_fair              1011.00         9.0000E-02   wcrs        
+  ub694_fair              948.260         9.0000E-02   wcrs        
+  uj603_fair              815.290         9.0000E-02   wcrs        
+  vc201_fair              806.510         9.0000E-02   wcrs        
+  uj686_fair              819.260         9.0000E-02   wcrs        
+  uh979_fair              815.350         9.0000E-02   wcrs        
+  tx596_fair              809.430         9.0000E-02   wcrs        
+  ub710_fair              800.530         9.0000E-02   wcrs        
+  uv235_fair              900.830         9.0000E-02   wcrs        
+  nf309_verygood          847.310         0.1800       wcrs        
+  uh963_fair              809.270         9.0000E-02   wcrs        
+  up473_fair              839.320         9.0000E-02   wcrs        
+  up488_fair              821.840         9.0000E-02   wcrs        
+  uj668_fair              809.250         9.0000E-02   wcrs        
+  jc365_verygood          823.900         0.1800       wcrs        
+  uj641_fair              819.000         9.0000E-02   wcrs        
+  uj677_fair              1006.34         9.0000E-02   wcrs        
+  bg975_verygood          919.900         0.1800       wcrs        
+  nw186_verygood          866.370         0.1800       wcrs        
+  uj622_fair              806.290         9.0000E-02   wcrs        
+  uh911_fair              830.380         9.0000E-02   wcrs        
+  bg976_verygood          891.110         0.1800       wcrs        
+  vb065_fair              824.680         9.0000E-02   wcrs        
+  vb072_fair              826.000         9.0000E-02   wcrs        
+  tx590_fair              824.980         9.0000E-02   wcrs        
+  up500_fair              822.000         9.0000E-02   wcrs        
+  tm268_fair              828.430         9.0000E-02   wcrs        
+  uh917_fair              923.390         9.0000E-02   wcrs        
+  uh928_fair              896.790         9.0000E-02   wcrs        
+  bg974_verygood          1080.04         0.1800       wcrs        
+  ms611_verygood          1015.96         0.1800       wcrs        
+  mo245_verygood          1004.43         0.1800       wcrs        
+  ub684_fair              1073.39         9.0000E-02   wcrs        
+  up451_fair              1177.23         9.0000E-02   wcrs        
+  uv229_fair              911.720         9.0000E-02   wcrs        
+  uh915_fair              913.000         9.0000E-02   wcrs        
+  cq800_verygood          1108.71         0.1800       wcrs        
+  up489_fair              971.390         9.0000E-02   wcrs        
+  nu192_verygood          1144.83         0.1800       wcrs        
+  up469_fair              1177.57         9.0000E-02   wcrs        
+  rg699_verygood          1123.07         0.1800       wcrs        
+  uh962_fair              979.810         9.0000E-02   wcrs        
+  wj264_good              946.890         0.1400       wcrs        
+  uh925_fair              1060.00         9.0000E-02   wcrs        
+  ub716_fair              1188.00         9.0000E-02   wcrs        
+  uz304_fair              951.230         9.0000E-02   wcrs        
+  tn878_fair              1190.00         9.0000E-02   wcrs        
+  ut891_fair              1203.12         9.0000E-02   wcrs        
+  uh924_fair              1079.00         9.0000E-02   wcrs        
+  bp278_verygood          964.700         0.1800       wcrs        
+  bp294_verygood          1183.03         0.1800       wcrs        
+  gv618_verygood          967.890         0.1800       wcrs        
+  bp293_verygood          1186.97         0.1800       wcrs        
+  ej737_verygood          971.220         0.1800       wcrs        
+  jc779_verygood          1191.44         0.1800       wcrs        
+  mr595_verygood          966.000         0.1800       wcrs        
+  uu041_good              1194.04         0.1400       wcrs        
+  up479_fair              1105.18         9.0000E-02   wcrs        
+  ub705_fair              1215.53         9.0000E-02   wcrs        
+  bp288_verygood          976.800         0.1800       wcrs        
+  uv220_fair              965.960         9.0000E-02   wcrs        
+  uq199_good              1171.00         0.1400       wcrs        
+  uh923_fair              1118.00         9.0000E-02   wcrs        
+  bp257_verygood          1228.85         0.1800       wcrs        
+  ub725_fair              1280.38         9.0000E-02   wcrs        
+  jc417_verygood          1234.00         0.1800       wcrs        
+  uq200_good              1298.18         0.1400       wcrs        
+  bg978_verygood          1255.55         0.1800       wcrs        
+  bg977_verygood          1255.57         0.1800       wcrs        
+  uc728_fair              1240.38         9.0000E-02   wcrs        
+  wk067_verygood          1249.04         0.1800       wcrs        
+  li644_verygood          1250.84         0.1800       wcrs        
+  vc873_good              1313.15         0.1400       wcrs        
+  uq196_good              1311.01         0.1400       wcrs        
+  aa934                   839.000         4.7500E-02   wcrs        
+  af287                   825.000         4.7500E-02   wcrs        
+  af564                   876.000         4.7500E-02   wcrs        
+  ah460                   804.000         4.7500E-02   wcrs        
+  ah462                   850.400         4.7500E-02   wcrs        
+  ah464                   980.500         4.7500E-02   wcrs        
+  ah793                   822.000         4.7500E-02   wcrs        
+  ah794                   806.000         4.7500E-02   wcrs        
+  ah795                   975.000         4.7500E-02   wcrs        
+  aj152                   823.000         4.7500E-02   wcrs        
+  av400                   958.000         4.7500E-02   wcrs        
+  average                 1101.50         4.7500E-02   wcrs        
+  averageduplicate1       1105.50         4.7500E-02   wcrs        
+  averageduplicate10~1    1053.20         4.7500E-02   wcrs        
+  averageduplicate10~2    808.500         4.7500E-02   wcrs        
+  averageduplicate10~3    845.000         4.7500E-02   wcrs        
+  averageduplicate10~4    832.500         4.7500E-02   wcrs        
+  averageduplicate10~5    829.400         4.7500E-02   wcrs        
+  averageduplicate10~6    844.600         4.7500E-02   wcrs        
+  averageduplicate10~7    842.900         4.7500E-02   wcrs        
+  averageduplicate10~8    839.300         4.7500E-02   wcrs        
+  averageduplicate10~9    841.000         4.7500E-02   wcrs        
+  averageduplicate1~10    832.000         4.7500E-02   wcrs        
+  averageduplicate1~11    830.300         4.7500E-02   wcrs        
+  averageduplicate11~1    1030.50         4.7500E-02   wcrs        
+  averageduplicate12~1    976.500         4.7500E-02   wcrs        
+  averageduplicate13~1    1034.20         4.7500E-02   wcrs        
+  averageduplicate14~1    1004.50         4.7500E-02   wcrs        
+  averageduplicate15~1    985.000         4.7500E-02   wcrs        
+  averageduplicate16~1    969.500         4.7500E-02   wcrs        
+  averageduplicate17~1    901.500         4.7500E-02   wcrs        
+  averageduplicate18~1    923.700         4.7500E-02   wcrs        
+  averageduplicate2       1104.50         4.7500E-02   wcrs        
+  averageduplicate20~1    926.200         4.7500E-02   wcrs        
+  averageduplicate21~1    913.700         4.7500E-02   wcrs        
+  averageduplicate22~1    901.500         4.7500E-02   wcrs        
+  averageduplicate23~1    914.500         4.7500E-02   wcrs        
+  averageduplicate26~1    972.600         4.7500E-02   wcrs        
+  averageduplicate28~1    972.100         4.7500E-02   wcrs        
+  averageduplicate29~1    1002.30         4.7500E-02   wcrs        
+  averageduplicate3       1068.70         4.7500E-02   wcrs        
+  averageduplicate30~1    967.700         4.7500E-02   wcrs        
+  averageduplicate31~1    834.000         4.7500E-02   wcrs        
+  averageduplicate32~1    844.500         4.7500E-02   wcrs        
+  averageduplicate33~1    851.000         4.7500E-02   wcrs        
+  averageduplicate34~1    829.500         4.7500E-02   wcrs        
+  averageduplicate35~1    861.000         4.7500E-02   wcrs        
+  averageduplicate36~1    842.400         4.7500E-02   wcrs        
+  averageduplicate37~1    817.300         4.7500E-02   wcrs        
+  averageduplicate38~1    822.000         4.7500E-02   wcrs        
+  averageduplicate39~1    854.300         4.7500E-02   wcrs        
+  averageduplicate4       1091.50         4.7500E-02   wcrs        
+  averageduplicate40~1    848.000         4.7500E-02   wcrs        
+  averageduplicate41~1    817.700         4.7500E-02   wcrs        
+  averageduplicate42~1    848.500         4.7500E-02   wcrs        
+  averageduplicate43~1    845.000         4.7500E-02   wcrs        
+  averageduplicate44~1    830.400         4.7500E-02   wcrs        
+  averageduplicate45~1    824.000         4.7500E-02   wcrs        
+  averageduplicate46~1    835.700         4.7500E-02   wcrs        
+  averageduplicate47~1    842.500         4.7500E-02   wcrs        
+  averageduplicate48~1    833.700         4.7500E-02   wcrs        
+  averageduplicate49~1    846.000         4.7500E-02   wcrs        
+  averageduplicate5       1083.80         4.7500E-02   wcrs        
+  averageduplicate50~1    855.200         4.7500E-02   wcrs        
+  averageduplicate52~1    840.500         4.7500E-02   wcrs        
+  averageduplicate53~1    821.000         4.7500E-02   wcrs        
+  averageduplicate54~1    860.300         4.7500E-02   wcrs        
+  averageduplicate55~1    842.500         4.7500E-02   wcrs        
+  averageduplicate56~1    848.000         4.7500E-02   wcrs        
+  averageduplicate57~1    852.000         4.7500E-02   wcrs        
+  averageduplicate58~1    832.200         4.7500E-02   wcrs        
+  averageduplicate59~1    844.600         4.7500E-02   wcrs        
+  averageduplicate6       1090.00         4.7500E-02   wcrs        
+  averageduplicate60~1    839.000         4.7500E-02   wcrs        
+  averageduplicate61~1    834.200         4.7500E-02   wcrs        
+  averageduplicate62~1    834.500         4.7500E-02   wcrs        
+  averageduplicate63~1    826.500         4.7500E-02   wcrs        
+  averageduplicate64~1    832.500         4.7500E-02   wcrs        
+  averageduplicate65~1    807.800         4.7500E-02   wcrs        
+  averageduplicate66~1    846.800         4.7500E-02   wcrs        
+  averageduplicate67~1    842.500         4.7500E-02   wcrs        
+  averageduplicate68~1    824.000         4.7500E-02   wcrs        
+  averageduplicate69~1    839.500         4.7500E-02   wcrs        
+  averageduplicate7       1078.20         4.7500E-02   wcrs        
+  averageduplicate70~1    827.000         4.7500E-02   wcrs        
+  averageduplicate71~1    864.700         4.7500E-02   wcrs        
+  averageduplicate72~1    830.800         4.7500E-02   wcrs        
+  averageduplicate73~1    844.000         4.7500E-02   wcrs        
+  averageduplicate74~1    850.000         4.7500E-02   wcrs        
+  averageduplicate75~1    837.500         4.7500E-02   wcrs        
+  averageduplicate76~1    835.000         4.7500E-02   wcrs        
+  averageduplicate77~1    837.700         4.7500E-02   wcrs        
+  averageduplicate78~1    834.500         4.7500E-02   wcrs        
+  averageduplicate79~1    849.000         4.7500E-02   wcrs        
+  averageduplicate8       1013.30         4.7500E-02   wcrs        
+  averageduplicate80~1    816.000         4.7500E-02   wcrs        
+  averageduplicate81~1    851.000         4.7500E-02   wcrs        
+  averageduplicate82~1    843.000         4.7500E-02   wcrs        
+  averageduplicate83~1    829.000         4.7500E-02   wcrs        
+  averageduplicate84~1    833.000         4.7500E-02   wcrs        
+  averageduplicate85~1    842.500         4.7500E-02   wcrs        
+  averageduplicate86~1    828.200         4.7500E-02   wcrs        
+  averageduplicate87~1    842.500         4.7500E-02   wcrs        
+  averageduplicate88~1    834.500         4.7500E-02   wcrs        
+  averageduplicate89~1    822.500         4.7500E-02   wcrs        
+  averageduplicate9       1027.00         4.7500E-02   wcrs        
+  averageduplicate90~1    841.200         4.7500E-02   wcrs        
+  averageduplicate91~1    845.700         4.7500E-02   wcrs        
+  averageduplicate92~1    836.700         4.7500E-02   wcrs        
+  averageduplicate93~1    856.500         4.7500E-02   wcrs        
+  averageduplicate94~1    825.000         4.7500E-02   wcrs        
+  averageduplicate95~1    829.500         4.7500E-02   wcrs        
+  averageduplicate96~1    860.800         4.7500E-02   wcrs        
+  averageduplicate97~1    864.500         4.7500E-02   wcrs        
+  averageduplicate98~1    835.000         4.7500E-02   wcrs        
+  averageduplicate99~1    850.300         4.7500E-02   wcrs        
+  cc113                   861.000         4.7500E-02   wcrs        
+  cc125                   820.000         4.7500E-02   wcrs        
+  cc130                   805.000         4.7500E-02   wcrs        
+  cc793                   1027.00         4.7500E-02   wcrs        
+  cc943                   868.000         4.7500E-02   wcrs        
+  cd346                   823.000         4.7500E-02   wcrs        
+  cd423                   832.000         4.7500E-02   wcrs        
+  cd427                   852.000         4.7500E-02   wcrs        
+  ce989                   998.000         4.7500E-02   wcrs        
+  ce993                   854.000         4.7500E-02   wcrs        
+  ci546                   1069.00         4.7500E-02   wcrs        
+  cj196                   828.000         4.7500E-02   wcrs        
+  cj631                   825.000         4.7500E-02   wcrs        
+  cj867                   992.000         4.7500E-02   wcrs        
+  cj870                   815.000         4.7500E-02   wcrs        
+  cj871                   834.000         4.7500E-02   wcrs        
+  cj872                   847.000         4.7500E-02   wcrs        
+  cn495                   1095.00         4.7500E-02   wcrs        
+  cn496                   854.000         4.7500E-02   wcrs        
+  cn497                   888.000         4.7500E-02   wcrs        
+  cn498                   834.000         4.7500E-02   wcrs        
+  cn500                   844.000         4.7500E-02   wcrs        
+  cn604                   941.000         4.7500E-02   wcrs        
+  cn912                   833.000         4.7500E-02   wcrs        
+  cn989                   870.000         4.7500E-02   wcrs        
+  cw941                   919.000         4.7500E-02   wcrs        
+  cx116                   1055.00         4.7500E-02   wcrs        
+  cx117                   1096.60         4.7500E-02   wcrs        
+  cx119                   1131.80         4.7500E-02   wcrs        
+  cx122                   1110.00         4.7500E-02   wcrs        
+  cy384                   983.500         4.7500E-02   wcrs        
+  cy386                   1021.00         4.7500E-02   wcrs        
+  cy390                   1000.00         4.7500E-02   wcrs        
+  cz997                   846.000         4.7500E-02   wcrs        
+  cz998                   834.500         4.7500E-02   wcrs        
+  dc582                   1088.40         4.7500E-02   wcrs        
+  dd849                   1078.20         4.7500E-02   wcrs        
+  dd852                   1033.90         4.7500E-02   wcrs        
+  dd853                   1132.00         4.7500E-02   wcrs        
+  de904                   838.000         4.7500E-02   wcrs        
+  dp027                   854.000         4.7500E-02   wcrs        
+  dp035                   831.000         4.7500E-02   wcrs        
+  dp036                   835.000         4.7500E-02   wcrs        
+  dp038                   995.000         4.7500E-02   wcrs        
+  dp193                   822.000         4.7500E-02   wcrs        
+  dp228                   833.000         4.7500E-02   wcrs        
+  dp288                   974.000         4.7500E-02   wcrs        
+  dp479                   855.500         4.7500E-02   wcrs        
+  dq062                   874.000         4.7500E-02   wcrs        
+  dq270                   922.000         4.7500E-02   wcrs        
+  dq427                   874.000         4.7500E-02   wcrs        
+  dt028                   838.000         4.7500E-02   wcrs        
+  eo006                   1061.50         4.7500E-02   wcrs        
+  eo007                   1084.00         4.7500E-02   wcrs        
+  eo012                   840.000         4.7500E-02   wcrs        
+  eo348                   926.000         4.7500E-02   wcrs        
+  eo960                   921.000         4.7500E-02   wcrs        
+  eo996                   1066.50         4.7500E-02   wcrs        
+  eo997                   1076.00         4.7500E-02   wcrs        
+  ep508                   806.000         4.7500E-02   wcrs        
+  ep520                   830.000         4.7500E-02   wcrs        
+  eq055                   857.000         4.7500E-02   wcrs        
+  eq064                   840.000         4.7500E-02   wcrs        
+  eq652                   856.000         4.7500E-02   wcrs        
+  eq656                   965.000         4.7500E-02   wcrs        
+  eq848                   1038.80         4.7500E-02   wcrs        
+  eq849                   1122.00         4.7500E-02   wcrs        
+  eq850                   1015.00         4.7500E-02   wcrs        
+  fk097                   826.000         4.7500E-02   wcrs        
+  fl331                   961.000         4.7500E-02   wcrs        
+  fo061                   824.000         4.7500E-02   wcrs        
+  fo067                   971.000         4.7500E-02   wcrs        
+  fr844                   877.000         4.7500E-02   wcrs        
+  fr944                   918.000         4.7500E-02   wcrs        
+  fx655                   836.000         4.7500E-02   wcrs        
+  gc447                   1077.60         4.7500E-02   wcrs        
+  gd880                   836.500         4.7500E-02   wcrs        
+  gd881                   978.500         4.7500E-02   wcrs        
+  gd883                   860.500         4.7500E-02   wcrs        
+  gd884                   849.500         4.7500E-02   wcrs        
+  gd892                   840.000         4.7500E-02   wcrs        
+  gi957                   845.000         4.7500E-02   wcrs        
+  gl052                   858.000         4.7500E-02   wcrs        
+  gl101                   867.000         4.7500E-02   wcrs        
+  gl120                   823.000         4.7500E-02   wcrs        
+  hj937                   851.000         4.7500E-02   wcrs        
+  hj946                   834.000         4.7500E-02   wcrs        
+  hk696                   937.000         4.7500E-02   wcrs        
+  hl337                   821.000         4.7500E-02   wcrs        
+  hl346                   820.000         4.7500E-02   wcrs        
+  hn192                   804.000         4.7500E-02   wcrs        
+  hn401                   981.000         4.7500E-02   wcrs        
+  ht105                   850.000         4.7500E-02   wcrs        
+  ht126                   860.000         4.7500E-02   wcrs        
+  ht780                   910.000         4.7500E-02   wcrs        
+  hv357                   874.000         4.7500E-02   wcrs        
+  hv484                   835.000         4.7500E-02   wcrs        
+  hv490                   1021.00         4.7500E-02   wcrs        
+  hx720                   1030.00         4.7500E-02   wcrs        
+  hy199                   973.000         4.7500E-02   wcrs        
+  ib304                   942.000         4.7500E-02   wcrs        
+  ib309                   845.000         4.7500E-02   wcrs        
+  ib703                   1024.00         4.7500E-02   wcrs        
+  ib704                   1041.00         4.7500E-02   wcrs        
+  ib714                   913.000         4.7500E-02   wcrs        
+  id781                   835.000         4.7500E-02   wcrs        
+  ih193                   806.000         4.7500E-02   wcrs        
+  ih195                   858.000         4.7500E-02   wcrs        
+  ij617                   859.000         4.7500E-02   wcrs        
+  ij753                   859.000         4.7500E-02   wcrs        
+  ij754                   830.000         4.7500E-02   wcrs        
+  ij785                   934.000         4.7500E-02   wcrs        
+  ij786                   825.000         4.7500E-02   wcrs        
+  ij834                   949.000         4.7500E-02   wcrs        
+  il562                   1016.00         4.7500E-02   wcrs        
+  il568                   968.000         4.7500E-02   wcrs        
+  il572                   978.000         4.7500E-02   wcrs        
+  il573                   1025.00         4.7500E-02   wcrs        
+  il720                   991.000         4.7500E-02   wcrs        
+  il748                   848.000         4.7500E-02   wcrs        
+  il752                   807.500         4.7500E-02   wcrs        
+  il754                   914.000         4.7500E-02   wcrs        
+  il761                   920.500         4.7500E-02   wcrs        
+  il829                   845.000         4.7500E-02   wcrs        
+  il848                   953.000         4.7500E-02   wcrs        
+  il849                   981.000         4.7500E-02   wcrs        
+  il974                   1104.00         4.7500E-02   wcrs        
+  il980                   928.000         4.7500E-02   wcrs        
+  il992                   941.000         4.7500E-02   wcrs        
+  kq251                   1042.00         4.7500E-02   wcrs        
+  kq252                   1109.00         4.7500E-02   wcrs        
+  kq253                   1043.00         4.7500E-02   wcrs        
+  kq278                   840.000         4.7500E-02   wcrs        
+  kq308                   819.000         4.7500E-02   wcrs        
+  kq379                   908.000         4.7500E-02   wcrs        
+  kv154                   891.000         4.7500E-02   wcrs        
+  kv191                   853.000         4.7500E-02   wcrs        
+  kv192                   865.000         4.7500E-02   wcrs        
+  kx193                   983.000         4.7500E-02   wcrs        
+  kx254                   945.000         4.7500E-02   wcrs        
+  lh212                   999.750         4.7500E-02   wcrs        
+  lh213                   820.000         4.7500E-02   wcrs        
+  lh219                   878.000         4.7500E-02   wcrs        
+  lk800                   956.000         4.7500E-02   wcrs        
+  lk906                   833.000         4.7500E-02   wcrs        
+  ln443                   963.000         4.7500E-02   wcrs        
+  ln649                   863.000         4.7500E-02   wcrs        
+  ln654                   1084.00         4.7500E-02   wcrs        
+  ln655                   987.000         4.7500E-02   wcrs        
+  ln716                   865.000         4.7500E-02   wcrs        
+  ln722                   835.000         4.7500E-02   wcrs        
+  lt830                   1020.00         4.7500E-02   wcrs        
+  lx912                   868.000         4.7500E-02   wcrs        
+  ma034                   904.000         4.7500E-02   wcrs        
+  ma035                   806.000         4.7500E-02   wcrs        
+  ma053                   1045.00         4.7500E-02   wcrs        
+  ma064                   913.000         4.7500E-02   wcrs        
+  ma131                   993.000         4.7500E-02   wcrs        
+  ma191                   828.000         4.7500E-02   wcrs        
+  mc971                   923.000         4.7500E-02   wcrs        
+  mh620                   1021.00         4.7500E-02   wcrs        
+  mh622                   1050.00         4.7500E-02   wcrs        
+  mh623                   1028.00         4.7500E-02   wcrs        
+  mh627                   900.000         4.7500E-02   wcrs        
+  mh671                   855.000         4.7500E-02   wcrs        
+  mo069                   846.000         4.7500E-02   wcrs        
+  mo243                   998.000         4.7500E-02   wcrs        
+  mo298                   837.000         4.7500E-02   wcrs        
+  beaulieulakeelev        980.590         0.1960       lakes       
+  koonzlakeelev           980.600         0.1960       lakes       
+  malonelakeelev          916.180         0.1960       lakes       
+  missionlakeelev         938.240         0.1960       lakes       
+  deep_basin_lake         912.000         0.1750       lakes       
+  moonlakeelev            926.120         0.1960       lakes       
+  waukau_lake             905.000         0.1750       lakes       
+  pondelev                959.040         0.1960       lakes       
+  la_belle_lake           871.000         0.1750       lakes       
+  pine_lake               875.000         0.1750       lakes       
+  unnamed_lake4           882.000         0.1750       lakes       
+  burney_lake             1164.00         0.1750       lakes       
+  warington_lake          839.000         0.1750       lakes       
+  island_lake             972.000         0.1750       lakes       
+  small_lake              905.000         0.1750       lakes       
+  bass_lake               835.000         0.1750       lakes       
+  coon_lake               833.000         0.1750       lakes       
+  meyer_lake              1362.00         0.1750       lakes       
+  hilger_lake             1332.00         0.1750       lakes       
+  perkey_lake             1306.00         0.1750       lakes       
+  dark_lake               1295.00         0.1750       lakes       
+  west_lake               1287.00         0.1750       lakes       
+  our_lake                1264.00         0.1750       lakes       
+  bass_lake2              1281.00         0.1750       lakes       
+  lake_crowell            1247.00         0.1750       lakes       
+  hazel_lake              1246.00         0.1750       lakes       
+  brigham_lake            1238.00         0.1750       lakes       
+  unnamed_lake2           1234.00         0.1750       lakes       
+  teabeau_lake            1198.00         0.1750       lakes       
+  cott_lake               1216.00         0.1750       lakes       
+  fredenderg_lake         889.000         0.1750       lakes       
+  big_injun_lake          891.000         0.1750       lakes       
+  vejo_lake               889.000         0.1750       lakes       
+  st_joseph_lake          877.000         0.1750       lakes       
+  misc_04077654           110424.         7.4700E-05   streamflow  
+  misc_04075843           117484.         7.0200E-05   streamflow  
+  misc_04077010           428039.         1.9300E-05   streamflow  
+  partial_04077150        365000.         4.5200E-05   streamflow  
+  misc_04077614           775851.         1.0600E-05   streamflow  
+  partial_04077670        779812.         2.1200E-05   streamflow  
+  misc_04070771           609529.         1.3500E-05   streamflow  
+  partial_04076400       1.512000E+06     1.0900E-05   streamflow  
+  misc_04070945           570105.         1.4500E-05   streamflow  
+  misc_04075830          2.371912E+06     3.4800E-06   streamflow  
+  misc_04077623          2.213587E+06     3.7300E-06   streamflow  
+  partial_04075850       2.420290E+06     6.8200E-06   streamflow  
+  partial_04075803       2.872183E+06     5.7400E-06   streamflow  
+  misc_040775902         4.197571E+06     1.9700E-06   streamflow  
+  misc_04077590          3.908529E+06     2.1100E-06   streamflow  
+  partial_04075350       4.069436E+06     4.0500E-06   streamflow  
+  gage_04077630          9.504000E+06     3.4700E-06   streamflow  
+  partial_04076080       9.936000E+06     1.6600E-06   streamflow  
+  misc_04077700          1.251936E+07     6.6000E-07   streamflow  
+  misc_04076500          9.633809E+06     8.6000E-07   streamflow  
+  partial_04070720       9.616315E+06     1.7200E-06   streamflow  
+  partial_04077675       1.044508E+07     1.5800E-06   streamflow  
+  gage_04075500          3.974400E+07     8.3000E-07   streamflow  
+  gage_04077400          5.356800E+07     6.2000E-07   streamflow  
+  gage_04075200           864000.         3.8200E-05   streamflow  
+  partial_04070420       1.459224E+06     1.1300E-05   streamflow  
+  partial_04070600       1.080000E+06     1.5300E-05   streamflow  
+  partial_04070606       3.286592E+06     5.0200E-06   streamflow  
+  partial_04070680       1.218942E+06     1.3500E-05   streamflow  
+  partial_04070800        181440.         9.0900E-06   streamflow  
+  partial_04070950       2.034736E+06     8.1100E-06   streamflow  
+  partial_04075300       2.000440E+06     8.2500E-06   streamflow  
+  partial_04075807        588064.         2.8060E-05   streamflow  
+  partial_04075809        394068.         4.1900E-05   streamflow  
+  partial_04075905        378184.         4.3600E-05   streamflow  
+  partial_04077550        358560.         4.6000E-06   streamflow  
+  partial_04077595        159840.         1.0300E-05   streamflow  
+  partial_04077830        831804.         1.9800E-05   streamflow  
+  partial_05397190       1.296973E+06     1.2700E-05   streamflow  
+  tourt4_start            249475.         3.3000E-05   streamflow  
+  g04077400gain          2.011000E+06     1.2000E-06   gain        
+  p04077595gain          1.220216E+06     1.6700E-05   gain        
+  p04076080gain          4.643527E+06     3.3000E-06   gain        
+  p04077675gain           161273.         3.3000E-06   gain        
+  p04075350gain          1.204996E+06     9.7000E-06   gain        
+  p04070950gain          1.464631E+06     6.3000E-06   gain        
+  p04070800gain          1.204871E+06     6.8000E-06   gain        
+  p04070720gain          5.110780E+06     3.5000E-06   gain        
+  p04075850gain           48378.2         3.4000E-06   gain        
+  mb_error                0.00000          0.000       error       
+
+
+ Control settings:-
+
+    Initial lambda                                               :  0.0000    
+    Lambda adjustment factor                                     : iteration-dependent
+    Value of variable governing adjustment                       : -3.0000    
+    Sufficient new/old phi ratio per optimisation iteration      : 0.30000    
+    Limiting relative phi reduction between lambdas              : 1.00000E-02
+    Maximum trial lambdas per iteration                          :   1
+    Forgive model run failure during lamda testing               : yes
+    Forgive model run failure during Jacobian runs               : no
+
+    Perform Broyden's update of Jacobian matrix                  : yes
+    Maximum number of updates per iteration                      : 999
+    Undertake observation re-referencing                         : no
+
+    Maximum  factor  parameter change (factor-limited changes)   :  10.000
+    Maximum relative parameter change (relative-limited changes) : na
+    Fraction of initial parameter values used in computing
+    change limit for near-zero parameters                        : 1.00000E-03
+    Allow bending of parameter upgrade vector                    : no
+    Allow parameters to stick to their bounds                    : no
+
+    Relative phi reduction below which to begin use of
+    central derivatives                                          : 0.10000             
+    Iteration at which to first consider derivatives switch      :   1
+
+    Relative phi reduction indicating convergence                : 0.10000E-01
+    Number of phi values required within this range              :   3
+    Maximum number of consecutive failures to lower phi          :   3
+    Minimal relative parameter change indicating convergence     : 0.10000E-01
+    Number of consecutive iterations with minimal param change   :   3
+    Maximum number of optimisation iterations                    :  -1 (only compute Jacobian)
+
+    Attempt automatic user intervention                          : no
+
+    Attempt reuse of parameter sensitivities                     : no
+
+
+ File saving options: -
+
+    Save best JCO file                                           : yes
+    Save multiple JCO files                                      : no
+    Save multiple REI files                                      : no
+    Save multiple PAR files                                      : no
+ 
+ 
+                             OPTIMISATION RECORD
+
+
+ INITIAL CONDITIONS: 
+    Sum of squared weighted residuals (ie phi)               =   6289.6    
+    Contribution to phi from observation group "obs_network" =   294.16    
+    Contribution to phi from observation group "obs_wells"   =   2405.7    
+    Contribution to phi from observation group "wcrs"        =   1495.8    
+    Contribution to phi from observation group "lakes"       =   192.32    
+    Contribution to phi from observation group "streamflow"  =   1634.5    
+    Contribution to phi from observation group "gain"        =   267.09    
+    Contribution to phi from observation group "error"       =   0.0000    
+ 
+       Current parameter values
+       kglobal_____     2.92317    
+       bglobal_____     500.000    
+       knorthwest__     4.60947    
+       bnorthwest__     600.000    
+       headnorthwst     1400.00    
+       koutwash____     8.00079    
+       boutwash____     400.000    
+       headoutwash_     900.000    
+       kantigo_mult     1.50596    
+       k_endmoraine     12.3143    
+       kbluffa_____    0.512445    
+       kbluffb_____     2.92317    
+       kgrmoraine__    0.512445    
+       kmorgana____    0.512445    
+       kmorganb____    0.512445    
+       kmorganc1___    0.512445    
+       kmorganc2___    0.512445    
+       knkeshena___    0.512445    
+       kskeshena___    0.512445    
+       kredspringsa    0.512445    
+       kredspringsb    0.512445    
+       kzoar_______     4.60947    
+       bzoar_______     1100.00    
+       headzoar____     1180.00    
+       rregional___     1.92449    
+       p-e_________     4.56300    
+       cdrainage___     1.00000    
+       cseepage____     10.0000    
+       cstream_____    0.500000    
+
+
+ OPTIMISATION ITERATION NO.        : 1
+    Model calls so far             : 1
+    Starting phi for this iteration                          :   6289.6    
+    Contribution to phi from observation group "obs_network" :   294.16    
+    Contribution to phi from observation group "obs_wells"   :   2405.7    
+    Contribution to phi from observation group "wcrs"        :   1495.8    
+    Contribution to phi from observation group "lakes"       :   192.32    
+    Contribution to phi from observation group "streamflow"  :   1634.5    
+    Contribution to phi from observation group "gain"        :   267.09    
+    Contribution to phi from observation group "error"       :   0.0000    
+
+    Optimisation complete: NOPTMAX supplied as -1 indicating that statistics
+                           for initial parameter set only are required.
+    Total model calls:     11
+
+    The model has been run one final time using best parameters. 
+    Thus all model input files contain best parameter values, and model 
+    output files contain model results based on these parameters.
+
+
+                             OPTIMISATION RESULTS
+
+
+ Adjustable parameters ----->
+
+ Parameter        Estimated         95% percent confidence limits
+                  value             lower limit       upper limit
+  kglobal_____    2.92317            2.31970           3.68363    
+  knorthwest__    4.60947            3.78299           5.61651    
+  koutwash____    8.00079            6.46133           9.90703    
+  kantigo_mult    1.50596          -0.155389           3.16732    
+  k_endmoraine    12.3143            9.07101           16.7171    
+  kgrmoraine__   0.512445           0.399159          0.657883    
+  rregional___    1.92449            1.78553           2.06345    
+  cdrainage___    1.00000           3.706321E-04       2698.09    
+  cseepage____    10.0000           0.277658           360.155    
+  cstream_____   0.500000           0.110255           2.26748    
+
+ Note: confidence limits provide only an indication of parameter uncertainty.
+       They rely on a linearity assumption which  may not extend as far in 
+       parameter space as the confidence limits themselves - see PEST manual.
+
+
+ Tied parameters ----->
+
+ Parameter      Estimated value
+  kbluffa_____   0.512445    
+  kbluffb_____    2.92317    
+  kmorgana____   0.512445    
+  kmorganb____   0.512445    
+  kmorganc1___   0.512445    
+  kmorganc2___   0.512445    
+  knkeshena___   0.512445    
+  kskeshena___   0.512445    
+  kredspringsa   0.512445    
+  kredspringsb   0.512445    
+  kzoar_______    4.60947    
+
+
+ Fixed parameters ----->
+
+ Parameter      Fixed value
+  bglobal_____    500.000    
+  bnorthwest__    600.000    
+  headnorthwst    1400.00    
+  boutwash____    400.000    
+  headoutwash_    900.000    
+  bzoar_______    1100.00    
+  headzoar____    1180.00    
+  p-e_________    4.56300    
+
+ See file menom8_sens.sen for parameter sensitivities.
+
+
+ Observations ----->
+
+ Observation            Measured       Calculated     Residual       Weight     Group
+                        value          value
+ gwobs_445333088451     953.120        949.534        3.58560        1.200      obs_network 
+ gwobs_445052088552     1008.61        999.987        8.62340        1.200      obs_network 
+ gwobs_445556089045     1227.90        1224.49        3.40700        1.200      obs_network 
+ gwobs_450242089065     1381.08        1373.46        7.61700        1.200      obs_network 
+ gwobs_450705089020     1420.17        1427.06       -6.88700        1.200      obs_network 
+ neopita                1086.20        1064.01        22.1940       0.3920      obs_wells   
+ neopitd                1074.70        1066.74        7.95800       0.3920      obs_wells   
+ neopite                1110.30        1072.30        38.0050       0.3920      obs_wells   
+ neopitf                1115.20        1068.44        46.7620       0.3920      obs_wells   
+ neopitg                1052.90        1043.30        9.60500       0.3920      obs_wells   
+ neopith                1090.70        1054.97        35.7340       0.3920      obs_wells   
+ neopiti                1053.70        1047.37        6.33400       0.3920      obs_wells   
+ neopitj                1081.60        1057.46        24.1400       0.3920      obs_wells   
+ neopitk                1107.00        1082.09        24.9110       0.3920      obs_wells   
+ neopitl                1057.00        1053.26        3.74500       0.3920      obs_wells   
+ neopitn                1090.00        1061.79        28.2120       0.3920      obs_wells   
+ neopito                1065.60        1071.18       -5.57700       0.3920      obs_wells   
+ neopitp                1054.20        1058.45       -4.25000       0.3920      obs_wells   
+ neo05                  1053.80        1058.01       -4.21300       0.3920      obs_wells   
+ neo08                  1080.20        1070.50        9.69700       0.3920      obs_wells   
+ neo10                  1082.40        1063.66        18.7380       0.3920      obs_wells   
+ neo11                  1093.40        1079.35        14.0460       0.3920      obs_wells   
+ neo13                  1087.10        1064.92        22.1750       0.3920      obs_wells   
+ neo_test_well1         1077.70        1063.58        14.1210       0.3920      obs_wells   
+ neo_test_well2         1080.90        1061.91        18.9940       0.3920      obs_wells   
+ neo_test_well3         1078.30        1062.54        15.7570       0.3920      obs_wells   
+ neo_b1                 1103.20        1064.23        38.9700       0.3920      obs_wells   
+ neo_b2                 1091.50        1068.13        23.3690       0.3920      obs_wells   
+ neo_b3                 1058.80        1054.95        3.85300       0.3920      obs_wells   
+ neo_b4                 1041.50        1049.61       -8.11100       0.3920      obs_wells   
+ ke12                   853.300        848.858        4.44240       0.3920      obs_wells   
+ ke2                    869.100        859.683        9.41730       0.3920      obs_wells   
+ ke3                    836.100        826.591        9.50880       0.3920      obs_wells   
+ ke4                    870.000        865.871        4.12930       0.3920      obs_wells   
+ ke5                    852.900        857.386       -4.48620       0.3920      obs_wells   
+ ke6                    856.200        838.811        17.3888       0.3920      obs_wells   
+ ke7                    825.900        830.755       -4.85530       0.3920      obs_wells   
+ ke9                    886.600        877.403        9.19720       0.3920      obs_wells   
+ me-0024                1295.10        1292.21        2.88800       0.3920      obs_wells   
+ me-0026                1260.70        1250.28        10.4210       0.3920      obs_wells   
+ me-0140                1312.30        1311.92       0.382000       0.3920      obs_wells   
+ me-0141                1225.60        1210.43        15.1670       0.3920      obs_wells   
+ me-0142                1158.20        1145.74        12.4580       0.3920      obs_wells   
+ mw1                    958.740        959.731      -0.990600       0.3920      obs_wells   
+ mw10                   937.280        930.346        6.93370       0.3920      obs_wells   
+ mw11                   938.150        939.885       -1.73490       0.3920      obs_wells   
+ mw12                   935.720        936.232      -0.512000       0.3920      obs_wells   
+ mw14                   926.480        926.530      -5.010000E-02   0.3920      obs_wells   
+ mw15                   918.520        917.418        1.10240       0.3920      obs_wells   
+ mw16                   927.330        923.701        3.62940       0.3920      obs_wells   
+ mw2                    948.630        958.512       -9.88220       0.3920      obs_wells   
+ mw21                   945.840        945.515       0.325200       0.3920      obs_wells   
+ mw22                   956.450        950.478        5.97170       0.3920      obs_wells   
+ mw23                   975.700        964.751        10.9486       0.3920      obs_wells   
+ mw24                   953.610        947.629        5.98120       0.3920      obs_wells   
+ mw25                   955.930        952.769        3.16100       0.3920      obs_wells   
+ mw3                    956.910        951.369        5.54140       0.3920      obs_wells   
+ mw33                   958.600        956.492        2.10750       0.3920      obs_wells   
+ mw34                   947.300        946.799       0.500800       0.3920      obs_wells   
+ mw35                   937.700        938.714       -1.01410       0.3920      obs_wells   
+ mw39                   944.000        937.384        6.61600       0.3920      obs_wells   
+ mw41                   978.500        971.350        7.14970       0.3920      obs_wells   
+ mw42                   981.500        971.835        9.66500       0.3920      obs_wells   
+ mw43                   974.500        974.034       0.465500       0.3920      obs_wells   
+ mw44                   978.600        983.189       -4.58900       0.3920      obs_wells   
+ mw45                   983.850        985.249       -1.39940       0.3920      obs_wells   
+ mw46                   978.550        980.718       -2.16800       0.3920      obs_wells   
+ mw5                    957.660        953.628        4.03230       0.3920      obs_wells   
+ mw6                    956.330        947.925        8.40480       0.3920      obs_wells   
+ mw7                    952.850        949.810        3.03960       0.3920      obs_wells   
+ mw8                    941.860        939.733        2.12740       0.3920      obs_wells   
+ mw9                    940.770        934.844        5.92620       0.3920      obs_wells   
+ sh-0043                1069.00        1083.28       -14.2770       0.3920      obs_wells   
+ sh-0044                1073.00        1087.24       -14.2360       0.3920      obs_wells   
+ sh-0084                1077.00        1069.35        7.65200       0.3920      obs_wells   
+ sh-0085                1105.00        1098.45        6.55300       0.3920      obs_wells   
+ sh-0090                1105.00        1089.85        15.1470       0.3920      obs_wells   
+ sh-0109                1091.00        1070.48        20.5190       0.3920      obs_wells   
+ sh-0115                1075.00        1064.88        10.1210       0.3920      obs_wells   
+ sh-0120                1096.20        1095.89       0.310000       0.3920      obs_wells   
+ sh-0121                1055.00        1066.73       -11.7350       0.3920      obs_wells   
+ sh-0131                1075.00        1059.79        15.2110       0.3920      obs_wells   
+ sh-0156                1093.00        1088.94        4.06400       0.3920      obs_wells   
+ sh-0158                1094.00        1089.17        4.82700       0.3920      obs_wells   
+ sh-0167                1105.00        1093.25        11.7490       0.3920      obs_wells   
+ sh-0184                1027.00        1013.89        13.1140       0.3920      obs_wells   
+ sh-0208                1077.40        1074.51        2.89400       0.3920      obs_wells   
+ uv249_fair             826.000        825.238       0.762300       9.0000E-02  wcrs        
+ uv205_fair             830.110        843.160       -13.0497       9.0000E-02  wcrs        
+ uh999_fair             829.450        840.236       -10.7855       9.0000E-02  wcrs        
+ vb071_fair             831.000        842.350       -11.3498       9.0000E-02  wcrs        
+ uv204_fair             832.000        844.232       -12.2321       9.0000E-02  wcrs        
+ wo620_good             840.630        831.356        9.27440       0.1400      wcrs        
+ tv629_good             827.450        832.523       -5.07290       0.1400      wcrs        
+ uh950_fair             839.080        841.081       -2.00070       9.0000E-02  wcrs        
+ uh977_fair             843.440        839.830        3.60970       9.0000E-02  wcrs        
+ uz318_fair             824.640        841.894       -17.2543       9.0000E-02  wcrs        
+ uv221_fair             835.000        840.649       -5.64950       9.0000E-02  wcrs        
+ wn720_good             844.000        844.909      -0.908700       0.1400      wcrs        
+ wk631_good             834.920        845.272       -10.3518       0.1400      wcrs        
+ wp965_good             844.500        846.720       -2.21950       0.1400      wcrs        
+ up466_fair             848.980        846.433        2.54650       9.0000E-02  wcrs        
+ uj605_fair             835.430        832.365        3.06460       9.0000E-02  wcrs        
+ wk595_good             838.130        832.297        5.83330       0.1400      wcrs        
+ up499_fair             838.280        846.170       -7.88990       9.0000E-02  wcrs        
+ uv239_fair             836.710        841.927       -5.21730       9.0000E-02  wcrs        
+ uv246_fair             843.960        843.888       7.220000E-02   9.0000E-02  wcrs        
+ uh918_fair             845.100        844.691       0.408900       9.0000E-02  wcrs        
+ uh916_fair             840.720        844.687       -3.96650       9.0000E-02  wcrs        
+ uv233_fair             845.000        845.967      -0.967300       9.0000E-02  wcrs        
+ vb076_fair             852.000        845.022        6.97770       9.0000E-02  wcrs        
+ ub703_fair             833.410        845.331       -11.9210       9.0000E-02  wcrs        
+ uv226_fair             835.030        845.215       -10.1846       9.0000E-02  wcrs        
+ uv227_fair             864.150        863.972       0.177900       9.0000E-02  wcrs        
+ uh949_fair             837.800        845.946       -8.14570       9.0000E-02  wcrs        
+ uh970_fair             842.650        847.664       -5.01410       9.0000E-02  wcrs        
+ wj253_good             840.000        845.468       -5.46850       0.1400      wcrs        
+ uj660_fair             855.630        845.429        10.2014       9.0000E-02  wcrs        
+ uj626_fair             834.080        845.430       -11.3501       9.0000E-02  wcrs        
+ uj612_fair             830.000        830.259      -0.259300       9.0000E-02  wcrs        
+ uo535_fair             843.190        845.520       -2.33000       9.0000E-02  wcrs        
+ ub687_fair             843.000        845.331       -2.33110       9.0000E-02  wcrs        
+ vb054_fair             844.000        845.487       -1.48700       9.0000E-02  wcrs        
+ up457_fair             847.950        845.537        2.41350       9.0000E-02  wcrs        
+ up467_fair             840.600        845.681       -5.08120       9.0000E-02  wcrs        
+ uj683_fair             851.000        845.326        5.67410       9.0000E-02  wcrs        
+ ub699_fair             853.000        845.772        7.22810       9.0000E-02  wcrs        
+ uv206_fair             844.000        846.687       -2.68730       9.0000E-02  wcrs        
+ ub711_fair             847.000        845.959        1.04120       9.0000E-02  wcrs        
+ uv234_fair             844.340        847.487       -3.14750       9.0000E-02  wcrs        
+ uv244_fair             833.900        847.783       -13.8833       9.0000E-02  wcrs        
+ uh985_fair             847.000        846.039       0.960900       9.0000E-02  wcrs        
+ up493_fair             849.680        845.888        3.79210       9.0000E-02  wcrs        
+ uh935_fair             847.000        846.971       2.900000E-02   9.0000E-02  wcrs        
+ uj673_fair             877.440        850.299        27.1414       9.0000E-02  wcrs        
+ uv224_fair             869.370        851.398        17.9716       9.0000E-02  wcrs        
+ uz311_fair             872.050        849.792        22.2581       9.0000E-02  wcrs        
+ uv247_fair             909.210        877.393        31.8174       9.0000E-02  wcrs        
+ uv243_fair             964.000        973.417       -9.41730       9.0000E-02  wcrs        
+ wp604_fair             1083.00        1062.12        20.8810       9.0000E-02  wcrs        
+ wp598_fair             1079.00        1061.96        17.0410       9.0000E-02  wcrs        
+ wo958_fair             1078.96        1062.54        16.4180       9.0000E-02  wcrs        
+ wp603_fair             1082.00        1062.71        19.2850       9.0000E-02  wcrs        
+ wo957_fair             1075.93        1063.58        12.3500       9.0000E-02  wcrs        
+ ub700_fair             932.330        908.116        24.2135       9.0000E-02  wcrs        
+ su027_fair             1281.15        1286.78       -5.63200       9.0000E-02  wcrs        
+ uu011_good             1271.69        1277.32       -5.62800       0.1400      wcrs        
+ uu039_good             1285.16        1288.31       -3.14500       0.1400      wcrs        
+ tc915_fair             1364.30        1341.44        22.8600       9.0000E-02  wcrs        
+ rq683_fair             1329.00        1342.70       -13.6990       9.0000E-02  wcrs        
+ nk035_fair             1353.48        1344.35        9.12600       9.0000E-02  wcrs        
+ or014_fair             1250.38        1257.13       -6.74700       9.0000E-02  wcrs        
+ fd439_verygood         1287.49        1284.56        2.92700       0.1800      wcrs        
+ gm004_fair             1272.00        1265.19        6.81200       9.0000E-02  wcrs        
+ ut879_good             1380.00        1385.09       -5.09200       0.1400      wcrs        
+ ut896_good             1379.59        1391.60       -12.0120       0.1400      wcrs        
+ uu026_good             1393.01        1410.95       -17.9410       0.1400      wcrs        
+ uu022_good             1327.55        1342.19       -14.6360       0.1400      wcrs        
+ us611_fair             1425.74        1435.11       -9.36700       9.0000E-02  wcrs        
+ us610_fair             1425.18        1435.05       -9.86600       9.0000E-02  wcrs        
+ va125_good             1361.40        1370.31       -8.90800       0.1400      wcrs        
+ va122_good             1361.73        1373.66       -11.9320       0.1400      wcrs        
+ iz948_verygood         1459.18        1455.03        4.15500       0.1800      wcrs        
+ uu030_good             1431.88        1447.13       -15.2530       0.1400      wcrs        
+ eg759_verygood         1452.96        1458.02       -5.06100       0.1800      wcrs        
+ ko028_verygood         1457.23        1464.96       -7.73400       0.1800      wcrs        
+ ej717_verygood         1455.00        1465.00       -9.99700       0.1800      wcrs        
+ va108_good             1374.48        1364.03        10.4540       0.1400      wcrs        
+ va119_good             1384.89        1374.69        10.1980       0.1400      wcrs        
+ up714_fair             1460.00        1464.16       -4.16200       9.0000E-02  wcrs        
+ vc854_good             1415.02        1433.93       -18.9110       0.1400      wcrs        
+ gj398_verygood         1469.31        1468.40       0.911000       0.1800      wcrs        
+ va129_good             1454.00        1470.71       -16.7110       0.1400      wcrs        
+ dj772_verygood         1435.18        1446.58       -11.4030       0.1800      wcrs        
+ va101_good             1451.21        1466.01       -14.7950       0.1400      wcrs        
+ up713_fair             1461.00        1472.25       -11.2470       9.0000E-02  wcrs        
+ ut889_good             1461.00        1471.78       -10.7820       0.1400      wcrs        
+ ej714_verygood         1466.00        1472.57       -6.56900       0.1800      wcrs        
+ em988_verygood         1463.00        1472.95       -9.95000       0.1800      wcrs        
+ ut871_good             1394.05        1412.49       -18.4400       0.1400      wcrs        
+ iz942_verygood         1462.51        1473.77       -11.2600       0.1800      wcrs        
+ wg737_fair             1464.30        1476.92       -12.6160       9.0000E-02  wcrs        
+ vc857_fair             1462.00        1474.52       -12.5240       9.0000E-02  wcrs        
+ ja663_verygood         1072.96        1068.42        4.53600       0.1800      wcrs        
+ ja664_good             1069.00        1069.37      -0.368000       0.1400      wcrs        
+ ja640_verygood         1463.00        1472.77       -9.77200       0.1800      wcrs        
+ ex794_verygood         1289.24        1311.10       -21.8630       0.1800      wcrs        
+ ex792_verygood         1289.93        1317.32       -27.3850       0.1800      wcrs        
+ ex793_verygood         1293.00        1314.43       -21.4290       0.1800      wcrs        
+ vc869_good             1468.30        1478.56       -10.2560       0.1400      wcrs        
+ gp145_verygood         1454.81        1481.70       -26.8910       0.1800      wcrs        
+ ex791_verygood         1270.36        1316.21       -45.8530       0.1800      wcrs        
+ bp993_verygood         1471.00        1478.28       -7.28200       0.1800      wcrs        
+ ty605_fair             1238.89        1243.83       -4.94200       9.0000E-02  wcrs        
+ vl811_fair             1466.00        1482.31       -16.3130       9.0000E-02  wcrs        
+ us605_fair             1470.00        1483.36       -13.3610       9.0000E-02  wcrs        
+ uu050_good             1369.59        1368.70       0.889000       0.1400      wcrs        
+ ik290_verygood         1437.72        1452.19       -14.4680       0.1800      wcrs        
+ uu019_good             1468.00        1485.69       -17.6870       0.1400      wcrs        
+ ut890_fair             1102.61        1089.09        13.5210       9.0000E-02  wcrs        
+ uh964_fair             1451.50        1466.75       -15.2490       9.0000E-02  wcrs        
+ qp729_verygood         1123.12        1112.18        10.9440       0.1800      wcrs        
+ up459_fair             1463.75        1484.43       -20.6760       9.0000E-02  wcrs        
+ ja651_verygood         1136.09        1107.75        28.3430       0.1800      wcrs        
+ ro412_verygood         1128.15        1108.40        19.7530       0.1800      wcrs        
+ uu037_good             1238.00        1251.54       -13.5410       0.1400      wcrs        
+ va113_good             1481.00        1490.50       -9.50300       0.1400      wcrs        
+ up096_fair             1117.24        1124.27       -7.03300       9.0000E-02  wcrs        
+ uq171_fair             1483.98        1486.81       -2.83200       9.0000E-02  wcrs        
+ uu003_good             1336.90        1344.58       -7.68000       0.1400      wcrs        
+ gp147_verygood         1457.84        1470.21       -12.3680       0.1800      wcrs        
+ bg226_verygood         1480.48        1487.35       -6.86700       0.1800      wcrs        
+ ar320_verygood         1482.50        1487.54       -5.03800       0.1800      wcrs        
+ bg221_verygood         1484.00        1487.75       -3.75000       0.1800      wcrs        
+ bg222_verygood         1482.00        1487.71       -5.70900       0.1800      wcrs        
+ bg224_verygood         1480.38        1488.14       -7.75900       0.1800      wcrs        
+ bg228_verygood         1252.29        1254.87       -2.58400       0.1800      wcrs        
+ uu047_good             1476.45        1495.19       -18.7420       0.1400      wcrs        
+ gj127_verygood         1183.00        1163.28        19.7250       0.1800      wcrs        
+ hq168_fair             1184.06        1163.12        20.9360       9.0000E-02  wcrs        
+ mf274_fair             1179.86        1162.17        17.6930       9.0000E-02  wcrs        
+ id800_verygood         1178.01        1163.71        14.2980       0.1800      wcrs        
+ uu010_fair             1283.48        1295.29       -11.8050       9.0000E-02  wcrs        
+ ej764_verygood         1255.06        1254.75       0.310000       0.1800      wcrs        
+ gp148_verygood         1499.58        1501.82       -2.23900       0.1800      wcrs        
+ uu014_good             1477.00        1499.27       -22.2720       0.1400      wcrs        
+ ty631_fair             1494.00        1511.21       -17.2060       9.0000E-02  wcrs        
+ uu040_good             1501.00        1502.76       -1.76200       0.1400      wcrs        
+ at093_verygood         1500.00        1502.31       -2.31200       0.1800      wcrs        
+ bg225_verygood         1503.43        1502.79       0.636000       0.1800      wcrs        
+ du688_fair             1477.72        1498.72       -20.9970       9.0000E-02  wcrs        
+ gq649_verygood         1339.95        1335.77        4.17700       0.1800      wcrs        
+ nz713_verygood         1476.92        1499.63       -22.7090       0.1800      wcrs        
+ fd434_verygood         1363.00        1362.23       0.770000       0.1800      wcrs        
+ va114_good             1473.47        1499.09       -25.6150       0.1400      wcrs        
+ ej725_verygood         1376.63        1382.58       -5.94700       0.1800      wcrs        
+ cr050_verygood         1481.00        1501.98       -20.9770       0.1800      wcrs        
+ iz944_good             1506.00        1501.31        4.69400       0.1400      wcrs        
+ nn547_verygood         1503.50        1504.35      -0.853000       0.1800      wcrs        
+ ko048_verygood         1290.45        1291.73       -1.27800       0.1800      wcrs        
+ fd370_verygood         1294.00        1281.72        12.2830       0.1800      wcrs        
+ us649_fair             1511.00        1508.26        2.74400       9.0000E-02  wcrs        
+ ut900_good             1507.17        1523.29       -16.1190       0.1400      wcrs        
+ fj046_verygood         1514.00        1509.42        4.58100       0.1800      wcrs        
+ uu032_good             1501.00        1527.12       -26.1150       0.1400      wcrs        
+ vc870_good             1284.60        1267.37        17.2320       0.1400      wcrs        
+ gs769_good             1241.76        1241.14       0.619000       0.1400      wcrs        
+ tb470_fair             1513.00        1517.05       -4.05200       9.0000E-02  wcrs        
+ ty580_fair             1514.00        1531.89       -17.8930       9.0000E-02  wcrs        
+ eg751_verygood         1238.51        1250.26       -11.7470       0.1800      wcrs        
+ ec280_verygood         1250.22        1250.13       9.300000E-02   0.1800      wcrs        
+ uu038_good             1255.87        1252.59        3.28100       0.1400      wcrs        
+ ja662_verygood         1242.83        1262.22       -19.3930       0.1800      wcrs        
+ te256_fair             1521.00        1521.08      -7.700000E-02   9.0000E-02  wcrs        
+ ty619_fair             1514.35        1535.50       -21.1480       9.0000E-02  wcrs        
+ tb469_fair             1505.70        1501.55        4.15000       9.0000E-02  wcrs        
+ ov130_verygood         1517.00        1534.55       -17.5450       0.1800      wcrs        
+ ul677_fair             1524.00        1520.86        3.13700       9.0000E-02  wcrs        
+ tb474_fair             1527.00        1543.21       -16.2070       9.0000E-02  wcrs        
+ uj782_fair             1519.00        1516.60        2.39700       9.0000E-02  wcrs        
+ ut856_good             1524.00        1522.68        1.31900       0.1400      wcrs        
+ gp451_verygood         1530.00        1524.68        5.32300       0.1800      wcrs        
+ va124_good             1530.00        1537.88       -7.87900       0.1400      wcrs        
+ ty632_fair             1533.00        1539.69       -6.69300       9.0000E-02  wcrs        
+ tb477_fair             1535.00        1543.84       -8.84300       9.0000E-02  wcrs        
+ us650_fair             1532.00        1541.35       -9.35000       9.0000E-02  wcrs        
+ rr300_fair             1325.57        1327.01       -1.44400       9.0000E-02  wcrs        
+ qt130_verygood         1351.92        1355.22       -3.29700       0.1800      wcrs        
+ us615_fair             1538.00        1554.17       -16.1710       9.0000E-02  wcrs        
+ va127_good             1540.47        1555.61       -15.1350       0.1400      wcrs        
+ ty645_fair             1539.00        1550.46       -11.4570       9.0000E-02  wcrs        
+ uu028_good             1369.46        1365.36        4.10000       0.1400      wcrs        
+ tw556_good             1355.29        1359.72       -4.43500       0.1400      wcrs        
+ dw054_verygood         1357.47        1373.25       -15.7810       0.1800      wcrs        
+ uu024_good             1386.63        1377.01        9.61800       0.1400      wcrs        
+ vc865_good             1397.00        1395.39        1.60600       0.1400      wcrs        
+ vc855_good             1439.00        1430.12        8.87600       0.1400      wcrs        
+ ef260_fair             1509.06        1524.01       -14.9460       9.0000E-02  wcrs        
+ vb055_fair             839.260        845.470       -6.21000       9.0000E-02  wcrs        
+ uv214_fair             838.000        845.532       -7.53150       9.0000E-02  wcrs        
+ uj667_fair             826.640        840.395       -13.7550       9.0000E-02  wcrs        
+ jc085_verygood         833.400        843.937       -10.5374       0.1800      wcrs        
+ uj670_fair             837.330        843.661       -6.33080       9.0000E-02  wcrs        
+ jc086_verygood         835.410        843.008       -7.59790       0.1800      wcrs        
+ vb056_fair             842.860        843.158      -0.297800       9.0000E-02  wcrs        
+ vb069_fair             840.280        842.088       -1.80770       9.0000E-02  wcrs        
+ vb073_fair             832.900        840.295       -7.39520       9.0000E-02  wcrs        
+ jc087_verygood         840.000        840.221      -0.221300       0.1800      wcrs        
+ tm253_fair             838.240        837.993       0.247400       9.0000E-02  wcrs        
+ tm237_fair             801.990        800.874        1.11650       9.0000E-02  wcrs        
+ uj650_fair             825.940        815.212        10.7277       9.0000E-02  wcrs        
+ uj665_fair             830.690        820.559        10.1305       9.0000E-02  wcrs        
+ uj689_fair             831.520        819.976        11.5444       9.0000E-02  wcrs        
+ jc083_verygood         810.000        805.170        4.82990       0.1800      wcrs        
+ ut602_fair             829.000        846.333       -17.3334       9.0000E-02  wcrs        
+ up498_fair             850.540        840.845        9.69490       9.0000E-02  wcrs        
+ tw583_good             834.370        824.989        9.38150       0.1400      wcrs        
+ up464_fair             838.930        832.036        6.89400       9.0000E-02  wcrs        
+ jc102_verygood         848.470        823.360        25.1096       0.1800      wcrs        
+ bp209_fair             835.000        821.750        13.2498       9.0000E-02  wcrs        
+ uj654_fair             859.810        818.149        41.6605       9.0000E-02  wcrs        
+ wo296_good             829.820        822.184        7.63570       0.1400      wcrs        
+ tw565_good             855.000        833.125        21.8745       0.1400      wcrs        
+ wn189_good             851.690        839.943        11.7468       0.1400      wcrs        
+ jc113_verygood         868.000        853.055        14.9451       0.1800      wcrs        
+ uj640_fair             834.590        839.929       -5.33940       9.0000E-02  wcrs        
+ jc112_verygood         886.360        854.680        31.6797       0.1800      wcrs        
+ id719_verygood         876.000        858.203        17.7966       0.1800      wcrs        
+ jc114_verygood         865.590        855.761        9.82900       0.1800      wcrs        
+ jc835_verygood         1104.67        1094.17        10.5010       0.1800      wcrs        
+ jc788_verygood         1098.64        1090.82        7.82500       0.1800      wcrs        
+ jc838_verygood         1107.94        1105.60        2.34500       0.1800      wcrs        
+ jc837_verygood         1104.37        1104.14       0.230000       0.1800      wcrs        
+ jc789_verygood         1107.92        1091.40        16.5200       0.1800      wcrs        
+ jc836_verygood         1105.47        1099.78        5.69200       0.1800      wcrs        
+ uj629_fair             1026.49        1031.65       -5.15900       9.0000E-02  wcrs        
+ jc840_verygood         1131.31        1097.94        33.3710       0.1800      wcrs        
+ jc222_verygood         1102.35        1099.42        2.92900       0.1800      wcrs        
+ jc839_verygood         1076.18        1092.29       -16.1070       0.1800      wcrs        
+ jc223_verygood         1103.67        1099.84        3.83000       0.1800      wcrs        
+ tw584_good             1111.04        1117.32       -6.27500       0.1400      wcrs        
+ jc310_verygood         1141.12        1151.51       -10.3920       0.1800      wcrs        
+ wn446_good             1179.19        1185.65       -6.46100       0.1400      wcrs        
+ wj248_good             1167.21        1153.40        13.8090       0.1400      wcrs        
+ wn447_good             1058.86        1076.06       -17.1970       0.1400      wcrs        
+ uj688_fair             1158.94        1172.85       -13.9090       9.0000E-02  wcrs        
+ uj666_fair             1167.61        1188.48       -20.8660       9.0000E-02  wcrs        
+ uu872_fair             1199.00        1233.72       -34.7240       9.0000E-02  wcrs        
+ jc231_verygood         1163.00        1125.32        37.6830       0.1800      wcrs        
+ wo295_good             1234.54        1251.99       -17.4550       0.1400      wcrs        
+ wk195_good             1194.75        1176.33        18.4200       0.1400      wcrs        
+ uj652_fair             1213.67        1187.33        26.3370       9.0000E-02  wcrs        
+ wn443_good             1184.57        1200.50       -15.9290       0.1400      wcrs        
+ uk465_good             1183.64        1208.25       -24.6090       0.1400      wcrs        
+ jc842_verygood         1309.08        1331.85       -22.7720       0.1800      wcrs        
+ uj653_fair             1179.00        1213.82       -34.8170       9.0000E-02  wcrs        
+ jc841_verygood         1308.00        1333.75       -25.7480       0.1800      wcrs        
+ ja970_verygood         1292.08        1327.35       -35.2720       0.1800      wcrs        
+ jc232_verygood         1199.66        1222.85       -23.1920       0.1800      wcrs        
+ jc233_verygood         1204.01        1225.26       -21.2460       0.1800      wcrs        
+ va234_fair             1275.19        1330.13       -54.9380       9.0000E-02  wcrs        
+ jc236_verygood         1234.52        1224.34        10.1810       0.1800      wcrs        
+ jc308_verygood         1325.00        1338.72       -13.7180       0.1800      wcrs        
+ uo974_fair             1345.83        1351.97       -6.14000       9.0000E-02  wcrs        
+ wj868_good             1290.37        1321.98       -31.6130       0.1400      wcrs        
+ bp290_verygood         843.000        847.184       -4.18360       0.1800      wcrs        
+ jc326_verygood         859.180        865.269       -6.08940       0.1800      wcrs        
+ jc325_verygood         841.300        847.140       -5.84050       0.1800      wcrs        
+ tm242_fair             814.180        808.694        5.48560       9.0000E-02  wcrs        
+ wm405_good             804.600        824.184       -19.5842       0.1400      wcrs        
+ ib715_verygood         925.970        921.837        4.13330       0.1800      wcrs        
+ up462_fair             795.250        806.731       -11.4814       9.0000E-02  wcrs        
+ up472_fair             859.000        876.372       -17.3720       9.0000E-02  wcrs        
+ uh969_fair             825.020        835.897       -10.8774       9.0000E-02  wcrs        
+ uh936_fair             821.660        820.052        1.60790       9.0000E-02  wcrs        
+ wo298_good             817.000        817.919      -0.919400       0.1400      wcrs        
+ tm271_fair             824.050        820.362        3.68750       9.0000E-02  wcrs        
+ un427_fair             818.000        824.264       -6.26380       9.0000E-02  wcrs        
+ hx722_verygood         828.000        822.218        5.78180       0.1800      wcrs        
+ vb075_fair             835.070        828.867        6.20290       9.0000E-02  wcrs        
+ sb644_fair             825.210        825.271      -6.080000E-02   9.0000E-02  wcrs        
+ up497_fair             820.990        821.086      -9.570000E-02   9.0000E-02  wcrs        
+ va244_fair             871.000        873.134       -2.13350       9.0000E-02  wcrs        
+ ub709_fair             818.980        819.421      -0.440800       9.0000E-02  wcrs        
+ jc402_verygood         844.120        836.723        7.39650       0.1800      wcrs        
+ qt193_verygood         851.150        839.650        11.5002       0.1800      wcrs        
+ uh913_fair             962.260        979.837       -17.5775       9.0000E-02  wcrs        
+ tm259_fair             825.000        829.863       -4.86310       9.0000E-02  wcrs        
+ uj632_fair             843.000        824.853        18.1473       9.0000E-02  wcrs        
+ uv236_fair             898.000        855.954        42.0456       9.0000E-02  wcrs        
+ uj661_fair             828.190        834.154       -5.96400       9.0000E-02  wcrs        
+ uj680_fair             834.000        827.303        6.69660       9.0000E-02  wcrs        
+ vb371_fair             954.000        951.999        2.00110       9.0000E-02  wcrs        
+ bg984_verygood         824.920        824.843       7.670000E-02   0.1800      wcrs        
+ wo330_good             830.000        831.920       -1.92000       0.1400      wcrs        
+ uz303_fair             811.000        813.771       -2.77070       9.0000E-02  wcrs        
+ uh927_fair             876.000        906.281       -30.2806       9.0000E-02  wcrs        
+ uz323_fair             854.800        833.382        21.4182       9.0000E-02  wcrs        
+ uh990_fair             818.140        814.965        3.17520       9.0000E-02  wcrs        
+ ub714_fair             1011.00        997.059        13.9409       9.0000E-02  wcrs        
+ ub694_fair             948.260        932.509        15.7514       9.0000E-02  wcrs        
+ uj603_fair             815.290        836.777       -21.4871       9.0000E-02  wcrs        
+ vc201_fair             806.510        805.365        1.14510       9.0000E-02  wcrs        
+ uj686_fair             819.260        816.699        2.56140       9.0000E-02  wcrs        
+ uh979_fair             815.350        812.748        2.60190       9.0000E-02  wcrs        
+ tx596_fair             809.430        810.292      -0.862300       9.0000E-02  wcrs        
+ ub710_fair             800.530        813.105       -12.5748       9.0000E-02  wcrs        
+ uv235_fair             900.830        900.563       0.267400       9.0000E-02  wcrs        
+ nf309_verygood         847.310        832.572        14.7382       0.1800      wcrs        
+ uh963_fair             809.270        822.527       -13.2566       9.0000E-02  wcrs        
+ up473_fair             839.320        836.049        3.27050       9.0000E-02  wcrs        
+ up488_fair             821.840        828.304       -6.46420       9.0000E-02  wcrs        
+ uj668_fair             809.250        816.922       -7.67190       9.0000E-02  wcrs        
+ jc365_verygood         823.900        835.680       -11.7797       0.1800      wcrs        
+ uj641_fair             819.000        822.330       -3.32960       9.0000E-02  wcrs        
+ uj677_fair             1006.34        1026.11       -19.7660       9.0000E-02  wcrs        
+ bg975_verygood         919.900        907.891        12.0094       0.1800      wcrs        
+ nw186_verygood         866.370        915.502       -49.1318       0.1800      wcrs        
+ uj622_fair             806.290        822.848       -16.5581       9.0000E-02  wcrs        
+ uh911_fair             830.380        827.886        2.49370       9.0000E-02  wcrs        
+ bg976_verygood         891.110        913.609       -22.4988       0.1800      wcrs        
+ vb065_fair             824.680        827.207       -2.52680       9.0000E-02  wcrs        
+ vb072_fair             826.000        830.061       -4.06140       9.0000E-02  wcrs        
+ tx590_fair             824.980        824.844       0.136400       9.0000E-02  wcrs        
+ up500_fair             822.000        829.422       -7.42210       9.0000E-02  wcrs        
+ tm268_fair             828.430        828.138       0.292500       9.0000E-02  wcrs        
+ uh917_fair             923.390        933.121       -9.73110       9.0000E-02  wcrs        
+ uh928_fair             896.790        928.935       -32.1447       9.0000E-02  wcrs        
+ bg974_verygood         1080.04        1070.36        9.68500       0.1800      wcrs        
+ ms611_verygood         1015.96        1004.46        11.4990       0.1800      wcrs        
+ mo245_verygood         1004.43        1004.19       0.239000       0.1800      wcrs        
+ ub684_fair             1073.39        1069.88        3.50900       9.0000E-02  wcrs        
+ up451_fair             1177.23        1178.86       -1.62600       9.0000E-02  wcrs        
+ uv229_fair             911.720        919.992       -8.27180       9.0000E-02  wcrs        
+ uh915_fair             913.000        930.963       -17.9633       9.0000E-02  wcrs        
+ cq800_verygood         1108.71        1097.97        10.7370       0.1800      wcrs        
+ up489_fair             971.390        970.934       0.456300       9.0000E-02  wcrs        
+ nu192_verygood         1144.83        1145.42      -0.586000       0.1800      wcrs        
+ up469_fair             1177.57        1176.26        1.30900       9.0000E-02  wcrs        
+ rg699_verygood         1123.07        1117.94        5.12900       0.1800      wcrs        
+ uh962_fair             979.810        966.471        13.3386       9.0000E-02  wcrs        
+ wj264_good             946.890        958.829       -11.9391       0.1400      wcrs        
+ uh925_fair             1060.00        1060.30      -0.300000       9.0000E-02  wcrs        
+ ub716_fair             1188.00        1178.52        9.47700       9.0000E-02  wcrs        
+ uz304_fair             951.230        975.082       -23.8522       9.0000E-02  wcrs        
+ tn878_fair             1190.00        1203.58       -13.5810       9.0000E-02  wcrs        
+ ut891_fair             1203.12        1195.80        7.32000       9.0000E-02  wcrs        
+ uh924_fair             1079.00        1063.67        15.3340       9.0000E-02  wcrs        
+ bp278_verygood         964.700        975.122       -10.4216       0.1800      wcrs        
+ bp294_verygood         1183.03        1180.99        2.04200       0.1800      wcrs        
+ gv618_verygood         967.890        974.564       -6.67360       0.1800      wcrs        
+ bp293_verygood         1186.97        1184.83        2.14200       0.1800      wcrs        
+ ej737_verygood         971.220        974.115       -2.89550       0.1800      wcrs        
+ jc779_verygood         1191.44        1184.74        6.69700       0.1800      wcrs        
+ mr595_verygood         966.000        973.029       -7.02890       0.1800      wcrs        
+ uu041_good             1194.04        1196.04       -1.99500       0.1400      wcrs        
+ up479_fair             1105.18        1097.25        7.92700       9.0000E-02  wcrs        
+ ub705_fair             1215.53        1214.60       0.926000       9.0000E-02  wcrs        
+ bp288_verygood         976.800        988.462       -11.6621       0.1800      wcrs        
+ uv220_fair             965.960        970.384       -4.42370       9.0000E-02  wcrs        
+ uq199_good             1171.00        1162.45        8.55300       0.1400      wcrs        
+ uh923_fair             1118.00        1110.18        7.82200       9.0000E-02  wcrs        
+ bp257_verygood         1228.85        1232.41       -3.56400       0.1800      wcrs        
+ ub725_fair             1280.38        1282.70       -2.31800       9.0000E-02  wcrs        
+ jc417_verygood         1234.00        1251.66       -17.6610       0.1800      wcrs        
+ uq200_good             1298.18        1289.58        8.60400       0.1400      wcrs        
+ bg978_verygood         1255.55        1267.12       -11.5670       0.1800      wcrs        
+ bg977_verygood         1255.57        1265.44       -9.87200       0.1800      wcrs        
+ uc728_fair             1240.38        1243.53       -3.15200       9.0000E-02  wcrs        
+ wk067_verygood         1249.04        1253.47       -4.43200       0.1800      wcrs        
+ li644_verygood         1250.84        1254.87       -4.03200       0.1800      wcrs        
+ vc873_good             1313.15        1324.67       -11.5230       0.1400      wcrs        
+ uq196_good             1311.01        1309.71        1.29500       0.1400      wcrs        
+ aa934                  839.000        843.922       -4.92170       4.7500E-02  wcrs        
+ af287                  825.000        843.657       -18.6569       4.7500E-02  wcrs        
+ af564                  876.000        856.208        19.7917       4.7500E-02  wcrs        
+ ah460                  804.000        825.796       -21.7957       4.7500E-02  wcrs        
+ ah462                  850.400        851.474       -1.07380       4.7500E-02  wcrs        
+ ah464                  980.500        974.892        5.60760       4.7500E-02  wcrs        
+ ah793                  822.000        886.086       -64.0864       4.7500E-02  wcrs        
+ ah794                  806.000        864.684       -58.6840       4.7500E-02  wcrs        
+ ah795                  975.000        984.913       -9.91330       4.7500E-02  wcrs        
+ aj152                  823.000        839.683       -16.6832       4.7500E-02  wcrs        
+ av400                  958.000        954.665        3.33500       4.7500E-02  wcrs        
+ average                1101.50        1094.86        6.64000       4.7500E-02  wcrs        
+ averageduplicate1      1105.50        1100.57        4.92600       4.7500E-02  wcrs        
+ averageduplicate10~1   1053.20        1074.08       -20.8810       4.7500E-02  wcrs        
+ averageduplicate10~2   808.500        837.197       -28.6969       4.7500E-02  wcrs        
+ averageduplicate10~3   845.000        829.788        15.2123       4.7500E-02  wcrs        
+ averageduplicate10~4   832.500        828.232        4.26830       4.7500E-02  wcrs        
+ averageduplicate10~5   829.400        843.489       -14.0891       4.7500E-02  wcrs        
+ averageduplicate10~6   844.600        843.378        1.22160       4.7500E-02  wcrs        
+ averageduplicate10~7   842.900        842.594       0.305700       4.7500E-02  wcrs        
+ averageduplicate10~8   839.300        841.000       -1.70050       4.7500E-02  wcrs        
+ averageduplicate10~9   841.000        838.309        2.69060       4.7500E-02  wcrs        
+ averageduplicate1~10   832.000        834.302       -2.30170       4.7500E-02  wcrs        
+ averageduplicate1~11   830.300        829.740       0.560300       4.7500E-02  wcrs        
+ averageduplicate11~1   1030.50        1049.36       -18.8550       4.7500E-02  wcrs        
+ averageduplicate12~1   976.500        980.722       -4.22160       4.7500E-02  wcrs        
+ averageduplicate13~1   1034.20        1047.50       -13.3040       4.7500E-02  wcrs        
+ averageduplicate14~1   1004.50        1011.48       -6.97900       4.7500E-02  wcrs        
+ averageduplicate15~1   985.000        967.886        17.1141       4.7500E-02  wcrs        
+ averageduplicate16~1   969.500        966.827        2.67270       4.7500E-02  wcrs        
+ averageduplicate17~1   901.500        932.979       -31.4785       4.7500E-02  wcrs        
+ averageduplicate18~1   923.700        933.608       -9.90760       4.7500E-02  wcrs        
+ averageduplicate2      1104.50        1100.59        3.90800       4.7500E-02  wcrs        
+ averageduplicate20~1   926.200        932.787       -6.58740       4.7500E-02  wcrs        
+ averageduplicate21~1   913.700        932.354       -18.6539       4.7500E-02  wcrs        
+ averageduplicate22~1   901.500        930.380       -28.8802       4.7500E-02  wcrs        
+ averageduplicate23~1   914.500        917.146       -2.64600       4.7500E-02  wcrs        
+ averageduplicate26~1   972.600        973.779       -1.17920       4.7500E-02  wcrs        
+ averageduplicate28~1   972.100        976.071       -3.97140       4.7500E-02  wcrs        
+ averageduplicate29~1   1002.30        981.844        20.4559       4.7500E-02  wcrs        
+ averageduplicate3      1068.70        1080.10       -11.4000       4.7500E-02  wcrs        
+ averageduplicate30~1   967.700        945.317        22.3833       4.7500E-02  wcrs        
+ averageduplicate31~1   834.000        833.612       0.387900       4.7500E-02  wcrs        
+ averageduplicate32~1   844.500        829.761        14.7393       4.7500E-02  wcrs        
+ averageduplicate33~1   851.000        847.104        3.89620       4.7500E-02  wcrs        
+ averageduplicate34~1   829.500        844.412       -14.9123       4.7500E-02  wcrs        
+ averageduplicate35~1   861.000        852.501        8.49940       4.7500E-02  wcrs        
+ averageduplicate36~1   842.400        847.719       -5.31890       4.7500E-02  wcrs        
+ averageduplicate37~1   817.300        839.283       -21.9832       4.7500E-02  wcrs        
+ averageduplicate38~1   822.000        843.865       -21.8650       4.7500E-02  wcrs        
+ averageduplicate39~1   854.300        853.084        1.21570       4.7500E-02  wcrs        
+ averageduplicate4      1091.50        1081.00        10.5000       4.7500E-02  wcrs        
+ averageduplicate40~1   848.000        844.787        3.21320       4.7500E-02  wcrs        
+ averageduplicate41~1   817.700        844.505       -26.8049       4.7500E-02  wcrs        
+ averageduplicate42~1   848.500        848.298       0.202100       4.7500E-02  wcrs        
+ averageduplicate43~1   845.000        850.503       -5.50320       4.7500E-02  wcrs        
+ averageduplicate44~1   830.400        841.567       -11.1673       4.7500E-02  wcrs        
+ averageduplicate45~1   824.000        845.091       -21.0909       4.7500E-02  wcrs        
+ averageduplicate46~1   835.700        845.458       -9.75760       4.7500E-02  wcrs        
+ averageduplicate47~1   842.500        845.381       -2.88060       4.7500E-02  wcrs        
+ averageduplicate48~1   833.700        847.353       -13.6528       4.7500E-02  wcrs        
+ averageduplicate49~1   846.000        848.624       -2.62370       4.7500E-02  wcrs        
+ averageduplicate5      1083.80        1080.88        2.92000       4.7500E-02  wcrs        
+ averageduplicate50~1   855.200        845.626        9.57390       4.7500E-02  wcrs        
+ averageduplicate52~1   840.500        845.846       -5.34570       4.7500E-02  wcrs        
+ averageduplicate53~1   821.000        845.598       -24.5979       4.7500E-02  wcrs        
+ averageduplicate54~1   860.300        846.494        13.8058       4.7500E-02  wcrs        
+ averageduplicate55~1   842.500        846.419       -3.91950       4.7500E-02  wcrs        
+ averageduplicate56~1   848.000        845.316        2.68440       4.7500E-02  wcrs        
+ averageduplicate57~1   852.000        846.840        5.15960       4.7500E-02  wcrs        
+ averageduplicate58~1   832.200        845.481       -13.2814       4.7500E-02  wcrs        
+ averageduplicate59~1   844.600        844.828      -0.228100       4.7500E-02  wcrs        
+ averageduplicate6      1090.00        1073.06        16.9380       4.7500E-02  wcrs        
+ averageduplicate60~1   839.000        845.033       -6.03300       4.7500E-02  wcrs        
+ averageduplicate61~1   834.200        845.448       -11.2479       4.7500E-02  wcrs        
+ averageduplicate62~1   834.500        846.418       -11.9177       4.7500E-02  wcrs        
+ averageduplicate63~1   826.500        846.047       -19.5468       4.7500E-02  wcrs        
+ averageduplicate64~1   832.500        844.684       -12.1840       4.7500E-02  wcrs        
+ averageduplicate65~1   807.800        842.652       -34.8516       4.7500E-02  wcrs        
+ averageduplicate66~1   846.800        843.527        3.27270       4.7500E-02  wcrs        
+ averageduplicate67~1   842.500        845.808       -3.30760       4.7500E-02  wcrs        
+ averageduplicate68~1   824.000        843.114       -19.1141       4.7500E-02  wcrs        
+ averageduplicate69~1   839.500        844.146       -4.64560       4.7500E-02  wcrs        
+ averageduplicate7      1078.20        1064.07        14.1350       4.7500E-02  wcrs        
+ averageduplicate70~1   827.000        843.859       -16.8592       4.7500E-02  wcrs        
+ averageduplicate71~1   864.700        844.525        20.1746       4.7500E-02  wcrs        
+ averageduplicate72~1   830.800        845.291       -14.4913       4.7500E-02  wcrs        
+ averageduplicate73~1   844.000        845.351       -1.35050       4.7500E-02  wcrs        
+ averageduplicate74~1   850.000        842.313        7.68690       4.7500E-02  wcrs        
+ averageduplicate75~1   837.500        845.173       -7.67350       4.7500E-02  wcrs        
+ averageduplicate76~1   835.000        845.511       -10.5112       4.7500E-02  wcrs        
+ averageduplicate77~1   837.700        845.084       -7.38430       4.7500E-02  wcrs        
+ averageduplicate78~1   834.500        848.796       -14.2957       4.7500E-02  wcrs        
+ averageduplicate79~1   849.000        852.386       -3.38620       4.7500E-02  wcrs        
+ averageduplicate8      1013.30        1007.79        5.51300       4.7500E-02  wcrs        
+ averageduplicate80~1   816.000        840.715       -24.7152       4.7500E-02  wcrs        
+ averageduplicate81~1   851.000        843.646        7.35380       4.7500E-02  wcrs        
+ averageduplicate82~1   843.000        845.326       -2.32640       4.7500E-02  wcrs        
+ averageduplicate83~1   829.000        848.333       -19.3326       4.7500E-02  wcrs        
+ averageduplicate84~1   833.000        840.190       -7.19010       4.7500E-02  wcrs        
+ averageduplicate85~1   842.500        844.322       -1.82250       4.7500E-02  wcrs        
+ averageduplicate86~1   828.200        845.440       -17.2400       4.7500E-02  wcrs        
+ averageduplicate87~1   842.500        845.524       -3.02450       4.7500E-02  wcrs        
+ averageduplicate88~1   834.500        842.175       -7.67470       4.7500E-02  wcrs        
+ averageduplicate89~1   822.500        845.283       -22.7833       4.7500E-02  wcrs        
+ averageduplicate9      1027.00        1008.72        18.2820       4.7500E-02  wcrs        
+ averageduplicate90~1   841.200        845.356       -4.15570       4.7500E-02  wcrs        
+ averageduplicate91~1   845.700        846.587      -0.887400       4.7500E-02  wcrs        
+ averageduplicate92~1   836.700        846.022       -9.32220       4.7500E-02  wcrs        
+ averageduplicate93~1   856.500        866.525       -10.0250       4.7500E-02  wcrs        
+ averageduplicate94~1   825.000        844.919       -19.9193       4.7500E-02  wcrs        
+ averageduplicate95~1   829.500        846.728       -17.2284       4.7500E-02  wcrs        
+ averageduplicate96~1   860.800        838.913        21.8872       4.7500E-02  wcrs        
+ averageduplicate97~1   864.500        874.982       -10.4817       4.7500E-02  wcrs        
+ averageduplicate98~1   835.000        832.833        2.16740       4.7500E-02  wcrs        
+ averageduplicate99~1   850.300        841.903        8.39680       4.7500E-02  wcrs        
+ cc113                  861.000        848.388        12.6121       4.7500E-02  wcrs        
+ cc125                  820.000        846.005       -26.0050       4.7500E-02  wcrs        
+ cc130                  805.000        845.433       -40.4328       4.7500E-02  wcrs        
+ cc793                  1027.00        1013.27        13.7260       4.7500E-02  wcrs        
+ cc943                  868.000        852.010        15.9905       4.7500E-02  wcrs        
+ cd346                  823.000        831.283       -8.28310       4.7500E-02  wcrs        
+ cd423                  832.000        845.689       -13.6891       4.7500E-02  wcrs        
+ cd427                  852.000        846.010        5.99030       4.7500E-02  wcrs        
+ ce989                  998.000        985.489        12.5110       4.7500E-02  wcrs        
+ ce993                  854.000        841.111        12.8885       4.7500E-02  wcrs        
+ ci546                  1069.00        1085.81       -16.8120       4.7500E-02  wcrs        
+ cj196                  828.000        830.673       -2.67290       4.7500E-02  wcrs        
+ cj631                  825.000        839.624       -14.6241       4.7500E-02  wcrs        
+ cj867                  992.000        984.105        7.89460       4.7500E-02  wcrs        
+ cj870                  815.000        846.408       -31.4081       4.7500E-02  wcrs        
+ cj871                  834.000        841.322       -7.32210       4.7500E-02  wcrs        
+ cj872                  847.000        837.310        9.68960       4.7500E-02  wcrs        
+ cn495                  1095.00        1090.57        4.43300       4.7500E-02  wcrs        
+ cn496                  854.000        862.664       -8.66440       4.7500E-02  wcrs        
+ cn497                  888.000        901.668       -13.6681       4.7500E-02  wcrs        
+ cn498                  834.000        848.178       -14.1780       4.7500E-02  wcrs        
+ cn500                  844.000        851.326       -7.32560       4.7500E-02  wcrs        
+ cn604                  941.000        941.645      -0.644600       4.7500E-02  wcrs        
+ cn912                  833.000        845.532       -12.5322       4.7500E-02  wcrs        
+ cn989                  870.000        852.418        17.5821       4.7500E-02  wcrs        
+ cw941                  919.000        943.159       -24.1592       4.7500E-02  wcrs        
+ cx116                  1055.00        1067.11       -12.1120       4.7500E-02  wcrs        
+ cx117                  1096.60        1083.92        12.6820       4.7500E-02  wcrs        
+ cx119                  1131.80        1118.80        13.0020       4.7500E-02  wcrs        
+ cx122                  1110.00        1103.50        6.50000       4.7500E-02  wcrs        
+ cy384                  983.500        966.403        17.0974       4.7500E-02  wcrs        
+ cy386                  1021.00        996.807        24.1927       4.7500E-02  wcrs        
+ cy390                  1000.00        990.551        9.44880       4.7500E-02  wcrs        
+ cz997                  846.000        842.999        3.00080       4.7500E-02  wcrs        
+ cz998                  834.500        840.745       -6.24550       4.7500E-02  wcrs        
+ dc582                  1088.40        1097.66       -9.26100       4.7500E-02  wcrs        
+ dd849                  1078.20        1093.95       -15.7520       4.7500E-02  wcrs        
+ dd852                  1033.90        1063.97       -30.0720       4.7500E-02  wcrs        
+ dd853                  1132.00        1134.25       -2.24600       4.7500E-02  wcrs        
+ de904                  838.000        834.711        3.28920       4.7500E-02  wcrs        
+ dp027                  854.000        837.062        16.9382       4.7500E-02  wcrs        
+ dp035                  831.000        845.433       -14.4335       4.7500E-02  wcrs        
+ dp036                  835.000        845.061       -10.0611       4.7500E-02  wcrs        
+ dp038                  995.000        969.651        25.3493       4.7500E-02  wcrs        
+ dp193                  822.000        830.364       -8.36430       4.7500E-02  wcrs        
+ dp228                  833.000        841.229       -8.22860       4.7500E-02  wcrs        
+ dp288                  974.000        987.924       -13.9238       4.7500E-02  wcrs        
+ dp479                  855.500        861.076       -5.57550       4.7500E-02  wcrs        
+ dq062                  874.000        923.913       -49.9129       4.7500E-02  wcrs        
+ dq270                  922.000        922.393      -0.393000       4.7500E-02  wcrs        
+ dq427                  874.000        879.634       -5.63430       4.7500E-02  wcrs        
+ dt028                  838.000        845.403       -7.40310       4.7500E-02  wcrs        
+ eo006                  1061.50        1057.22        4.28000       4.7500E-02  wcrs        
+ eo007                  1084.00        1094.75       -10.7530       4.7500E-02  wcrs        
+ eo012                  840.000        842.267       -2.26730       4.7500E-02  wcrs        
+ eo348                  926.000        950.911       -24.9114       4.7500E-02  wcrs        
+ eo960                  921.000        958.377       -37.3770       4.7500E-02  wcrs        
+ eo996                  1066.50        1069.06       -2.55700       4.7500E-02  wcrs        
+ eo997                  1076.00        1060.58        15.4210       4.7500E-02  wcrs        
+ ep508                  806.000        840.670       -34.6705       4.7500E-02  wcrs        
+ ep520                  830.000        845.341       -15.3411       4.7500E-02  wcrs        
+ eq055                  857.000        846.387        10.6126       4.7500E-02  wcrs        
+ eq064                  840.000        840.759      -0.759100       4.7500E-02  wcrs        
+ eq652                  856.000        840.451        15.5490       4.7500E-02  wcrs        
+ eq656                  965.000        991.265       -26.2652       4.7500E-02  wcrs        
+ eq848                  1038.80        1065.67       -26.8700       4.7500E-02  wcrs        
+ eq849                  1122.00        1119.82        2.18100       4.7500E-02  wcrs        
+ eq850                  1015.00        1018.82       -3.81700       4.7500E-02  wcrs        
+ fk097                  826.000        844.186       -18.1858       4.7500E-02  wcrs        
+ fl331                  961.000        977.052       -16.0516       4.7500E-02  wcrs        
+ fo061                  824.000        840.348       -16.3480       4.7500E-02  wcrs        
+ fo067                  971.000        967.455        3.54520       4.7500E-02  wcrs        
+ fr844                  877.000        855.704        21.2958       4.7500E-02  wcrs        
+ fr944                  918.000        931.999       -13.9992       4.7500E-02  wcrs        
+ fx655                  836.000        850.162       -14.1616       4.7500E-02  wcrs        
+ gc447                  1077.60        1065.02        12.5820       4.7500E-02  wcrs        
+ gd880                  836.500        846.067       -9.56750       4.7500E-02  wcrs        
+ gd881                  978.500        972.481        6.01920       4.7500E-02  wcrs        
+ gd883                  860.500        820.234        40.2660       4.7500E-02  wcrs        
+ gd884                  849.500        844.614        4.88590       4.7500E-02  wcrs        
+ gd892                  840.000        839.639       0.360900       4.7500E-02  wcrs        
+ gi957                  845.000        848.408       -3.40840       4.7500E-02  wcrs        
+ gl052                  858.000        863.683       -5.68340       4.7500E-02  wcrs        
+ gl101                  867.000        872.548       -5.54820       4.7500E-02  wcrs        
+ gl120                  823.000        848.134       -25.1340       4.7500E-02  wcrs        
+ hj937                  851.000        845.656        5.34430       4.7500E-02  wcrs        
+ hj946                  834.000        821.313        12.6865       4.7500E-02  wcrs        
+ hk696                  937.000        967.294       -30.2939       4.7500E-02  wcrs        
+ hl337                  821.000        839.123       -18.1229       4.7500E-02  wcrs        
+ hl346                  820.000        830.752       -10.7522       4.7500E-02  wcrs        
+ hn192                  804.000        830.507       -26.5067       4.7500E-02  wcrs        
+ hn401                  981.000        973.891        7.10860       4.7500E-02  wcrs        
+ ht105                  850.000        847.258        2.74220       4.7500E-02  wcrs        
+ ht126                  860.000        840.140        19.8602       4.7500E-02  wcrs        
+ ht780                  910.000        894.002        15.9984       4.7500E-02  wcrs        
+ hv357                  874.000        859.342        14.6577       4.7500E-02  wcrs        
+ hv484                  835.000        843.200       -8.20030       4.7500E-02  wcrs        
+ hv490                  1021.00        1036.57       -15.5710       4.7500E-02  wcrs        
+ hx720                  1030.00        1025.63        4.36500       4.7500E-02  wcrs        
+ hy199                  973.000        998.658       -25.6584       4.7500E-02  wcrs        
+ ib304                  942.000        947.529       -5.52870       4.7500E-02  wcrs        
+ ib309                  845.000        845.400      -0.399800       4.7500E-02  wcrs        
+ ib703                  1024.00        1012.04        11.9590       4.7500E-02  wcrs        
+ ib704                  1041.00        1057.44       -16.4380       4.7500E-02  wcrs        
+ ib714                  913.000        910.964        2.03640       4.7500E-02  wcrs        
+ id781                  835.000        843.371       -8.37150       4.7500E-02  wcrs        
+ ih193                  806.000        838.160       -32.1599       4.7500E-02  wcrs        
+ ih195                  858.000        846.382        11.6183       4.7500E-02  wcrs        
+ ij617                  859.000        843.963        15.0374       4.7500E-02  wcrs        
+ ij753                  859.000        830.239        28.7615       4.7500E-02  wcrs        
+ ij754                  830.000        840.976       -10.9756       4.7500E-02  wcrs        
+ ij785                  934.000        909.997        24.0026       4.7500E-02  wcrs        
+ ij786                  825.000        852.335       -27.3348       4.7500E-02  wcrs        
+ ij834                  949.000        908.547        40.4534       4.7500E-02  wcrs        
+ il562                  1016.00        1020.78       -4.78200       4.7500E-02  wcrs        
+ il568                  968.000        961.604        6.39610       4.7500E-02  wcrs        
+ il572                  978.000        960.551        17.4490       4.7500E-02  wcrs        
+ il573                  1025.00        1029.60       -4.59800       4.7500E-02  wcrs        
+ il720                  991.000        977.248        13.7519       4.7500E-02  wcrs        
+ il748                  848.000        819.578        28.4224       4.7500E-02  wcrs        
+ il752                  807.500        838.071       -30.5714       4.7500E-02  wcrs        
+ il754                  914.000        907.118        6.88170       4.7500E-02  wcrs        
+ il761                  920.500        908.557        11.9427       4.7500E-02  wcrs        
+ il829                  845.000        845.263      -0.262600       4.7500E-02  wcrs        
+ il848                  953.000        949.179        3.82080       4.7500E-02  wcrs        
+ il849                  981.000        979.546        1.45380       4.7500E-02  wcrs        
+ il974                  1104.00        1112.98       -8.98000       4.7500E-02  wcrs        
+ il980                  928.000        931.779       -3.77870       4.7500E-02  wcrs        
+ il992                  941.000        965.373       -24.3727       4.7500E-02  wcrs        
+ kq251                  1042.00        1059.76       -17.7560       4.7500E-02  wcrs        
+ kq252                  1109.00        1089.53        19.4740       4.7500E-02  wcrs        
+ kq253                  1043.00        1060.61       -17.6130       4.7500E-02  wcrs        
+ kq278                  840.000        852.059       -12.0592       4.7500E-02  wcrs        
+ kq308                  819.000        838.134       -19.1335       4.7500E-02  wcrs        
+ kq379                  908.000        946.767       -38.7671       4.7500E-02  wcrs        
+ kv154                  891.000        900.183       -9.18350       4.7500E-02  wcrs        
+ kv191                  853.000        829.275        23.7252       4.7500E-02  wcrs        
+ kv192                  865.000        842.793        22.2069       4.7500E-02  wcrs        
+ kx193                  983.000        976.870        6.13050       4.7500E-02  wcrs        
+ kx254                  945.000        944.500       0.499500       4.7500E-02  wcrs        
+ lh212                  999.750        962.516        37.2344       4.7500E-02  wcrs        
+ lh213                  820.000        845.830       -25.8304       4.7500E-02  wcrs        
+ lh219                  878.000        892.465       -14.4645       4.7500E-02  wcrs        
+ lk800                  956.000        908.359        47.6408       4.7500E-02  wcrs        
+ lk906                  833.000        845.956       -12.9556       4.7500E-02  wcrs        
+ ln443                  963.000        970.618       -7.61790       4.7500E-02  wcrs        
+ ln649                  863.000        849.807        13.1929       4.7500E-02  wcrs        
+ ln654                  1084.00        1092.35       -8.34700       4.7500E-02  wcrs        
+ ln655                  987.000        994.819       -7.81930       4.7500E-02  wcrs        
+ ln716                  865.000        830.288        34.7125       4.7500E-02  wcrs        
+ ln722                  835.000        845.528       -10.5281       4.7500E-02  wcrs        
+ lt830                  1020.00        1053.14       -33.1450       4.7500E-02  wcrs        
+ lx912                  868.000        844.599        23.4009       4.7500E-02  wcrs        
+ ma034                  904.000        900.436        3.56400       4.7500E-02  wcrs        
+ ma035                  806.000        821.953       -15.9529       4.7500E-02  wcrs        
+ ma053                  1045.00        972.667        72.3327       4.7500E-02  wcrs        
+ ma064                  913.000        904.502        8.49820       4.7500E-02  wcrs        
+ ma131                  993.000        1022.66       -29.6560       4.7500E-02  wcrs        
+ ma191                  828.000        828.878      -0.878000       4.7500E-02  wcrs        
+ mc971                  923.000        935.153       -12.1526       4.7500E-02  wcrs        
+ mh620                  1021.00        1038.90       -17.9030       4.7500E-02  wcrs        
+ mh622                  1050.00        1083.07       -33.0730       4.7500E-02  wcrs        
+ mh623                  1028.00        999.228        28.7722       4.7500E-02  wcrs        
+ mh627                  900.000        910.082       -10.0820       4.7500E-02  wcrs        
+ mh671                  855.000        898.065       -43.0649       4.7500E-02  wcrs        
+ mo069                  846.000        845.387       0.613000       4.7500E-02  wcrs        
+ mo243                  998.000        1004.29       -6.29400       4.7500E-02  wcrs        
+ mo298                  837.000        838.941       -1.94140       4.7500E-02  wcrs        
+ beaulieulakeelev       980.590        973.715        6.87500       0.1960      lakes       
+ koonzlakeelev          980.600        974.652        5.94800       0.1960      lakes       
+ malonelakeelev         916.180        931.138       -14.9579       0.1960      lakes       
+ missionlakeelev        938.240        928.302        9.93790       0.1960      lakes       
+ deep_basin_lake        912.000        958.210       -46.2103       0.1750      lakes       
+ moonlakeelev           926.120        924.556        1.56410       0.1960      lakes       
+ waukau_lake            905.000        936.278       -31.2778       0.1750      lakes       
+ pondelev               959.040        954.350        4.69030       0.1960      lakes       
+ la_belle_lake          871.000        889.048       -18.0481       0.1750      lakes       
+ pine_lake              875.000        893.637       -18.6370       0.1750      lakes       
+ unnamed_lake4          882.000        865.495        16.5048       0.1750      lakes       
+ burney_lake            1164.00        1158.00        6.00200       0.1750      lakes       
+ warington_lake         839.000        843.980       -4.97980       0.1750      lakes       
+ island_lake            972.000        975.075       -3.07500       0.1750      lakes       
+ small_lake             905.000        921.819       -16.8188       0.1750      lakes       
+ bass_lake              835.000        840.642       -5.64200       0.1750      lakes       
+ coon_lake              833.000        836.500       -3.49990       0.1750      lakes       
+ meyer_lake             1362.00        1352.88        9.12500       0.1750      lakes       
+ hilger_lake            1332.00        1336.05       -4.04500       0.1750      lakes       
+ perkey_lake            1306.00        1311.06       -5.05900       0.1750      lakes       
+ dark_lake              1295.00        1292.15        2.85400       0.1750      lakes       
+ west_lake              1287.00        1280.29        6.70900       0.1750      lakes       
+ our_lake               1264.00        1267.56       -3.55900       0.1750      lakes       
+ bass_lake2             1281.00        1269.10        11.9020       0.1750      lakes       
+ lake_crowell           1247.00        1240.16        6.84100       0.1750      lakes       
+ hazel_lake             1246.00        1236.27        9.73200       0.1750      lakes       
+ brigham_lake           1238.00        1231.98        6.02000       0.1750      lakes       
+ unnamed_lake2          1234.00        1220.53        13.4730       0.1750      lakes       
+ teabeau_lake           1198.00        1181.95        16.0500       0.1750      lakes       
+ cott_lake              1216.00        1198.71        17.2930       0.1750      lakes       
+ fredenderg_lake        889.000        883.357        5.64250       0.1750      lakes       
+ big_injun_lake         891.000        891.642      -0.641700       0.1750      lakes       
+ vejo_lake              889.000        887.389        1.61130       0.1750      lakes       
+ st_joseph_lake         877.000        878.062       -1.06250       0.1750      lakes       
+ misc_04077654          110424.        176461.       -66036.9       7.4700E-05  streamflow  
+ misc_04075843          117484.        104249.        13234.9       7.0200E-05  streamflow  
+ misc_04077010          428039.        318666.        109373.       1.9300E-05  streamflow  
+ partial_04077150       365000.        846260.       -481260.       4.5200E-05  streamflow  
+ misc_04077614          775851.        877299.       -101449.       1.0600E-05  streamflow  
+ partial_04077670       779812.        374080.        405732.       2.1200E-05  streamflow  
+ misc_04070771          609529.        510900.        98628.7       1.3500E-05  streamflow  
+ partial_04076400      1.512000E+06    852465.        659535.       1.0900E-05  streamflow  
+ misc_04070945          570105.        185098.        385007.       1.4500E-05  streamflow  
+ misc_04075830         2.371912E+06   2.040026E+06    331886.       3.4800E-06  streamflow  
+ misc_04077623         2.213587E+06   3.210810E+06   -997223.       3.7300E-06  streamflow  
+ partial_04075850      2.420290E+06   2.590860E+06   -170570.       6.8200E-06  streamflow  
+ partial_04075803      2.872183E+06   2.371305E+06    500878.       5.7400E-06  streamflow  
+ misc_040775902        4.197571E+06   3.916746E+06    280825.       1.9700E-06  streamflow  
+ misc_04077590         3.908529E+06   3.455678E+06    452851.       2.1100E-06  streamflow  
+ partial_04075350      4.069436E+06   3.399705E+06    669731.       4.0500E-06  streamflow  
+ gage_04077630         9.504000E+06   7.527286E+06   1.976714E+06   3.4700E-06  streamflow  
+ partial_04076080      9.936000E+06   6.082056E+06   3.853944E+06   1.6600E-06  streamflow  
+ misc_04077700         1.251936E+07   1.150232E+07   1.017040E+06   6.6000E-07  streamflow  
+ misc_04076500         9.633809E+06   9.496532E+06    137277.       8.6000E-07  streamflow  
+ partial_04070720      9.616315E+06   7.363309E+06   2.253006E+06   1.7200E-06  streamflow  
+ partial_04077675      1.044508E+07   9.552168E+06    892916.       1.5800E-06  streamflow  
+ gage_04075500         3.974400E+07   3.871265E+07   1.031350E+06   8.3000E-07  streamflow  
+ gage_04077400         5.356800E+07   5.109393E+07   2.474070E+06   6.2000E-07  streamflow  
+ gage_04075200          864000.        826350.        37650.0       3.8200E-05  streamflow  
+ partial_04070420      1.459224E+06   1.264483E+06    194741.       1.1300E-05  streamflow  
+ partial_04070600      1.080000E+06    367128.        712872.       1.5300E-05  streamflow  
+ partial_04070606      3.286592E+06   3.071715E+06    214877.       5.0200E-06  streamflow  
+ partial_04070680      1.218942E+06    789596.        429347.       1.3500E-05  streamflow  
+ partial_04070800       181440.       1.774516E+06  -1.593076E+06   9.0900E-06  streamflow  
+ partial_04070950      2.034736E+06   1.314563E+06    720173.       8.1100E-06  streamflow  
+ partial_04075300      2.000440E+06    850365.       1.150075E+06   8.2500E-06  streamflow  
+ partial_04075807       588064.        359682.        228382.       2.8060E-05  streamflow  
+ partial_04075809       394068.        206570.        187498.       4.1900E-05  streamflow  
+ partial_04075905       378184.        280182.        98002.0       4.3600E-05  streamflow  
+ partial_04077550       358560.       1.852853E+06  -1.494293E+06   4.6000E-06  streamflow  
+ partial_04077595       159840.       1.153457E+06   -993617.       1.0300E-05  streamflow  
+ partial_04077830       831804.        799599.        32204.9       1.9800E-05  streamflow  
+ partial_05397190      1.296973E+06    711793.        585180.       1.2700E-05  streamflow  
+ tourt4_start           249475.        170399.        79075.5       3.3000E-05  streamflow  
+ g04077400gain         2.011000E+06   4.600499E+06  -2.589499E+06   1.2000E-06  gain        
+ p04077595gain         1.220216E+06    873275.        346941.       1.6700E-05  gain        
+ p04076080gain         4.643527E+06   1.119891E+06   3.523636E+06   3.3000E-06  gain        
+ p04077675gain          161273.       1.650802E+06  -1.489529E+06   3.3000E-06  gain        
+ p04075350gain         1.204996E+06   1.722990E+06   -517994.       9.7000E-06  gain        
+ p04070950gain         1.464631E+06   1.129466E+06    335166.       6.3000E-06  gain        
+ p04070800gain         1.204871E+06   1.263616E+06   -58744.7       6.8000E-06  gain        
+ p04070720gain         5.110780E+06   3.501998E+06   1.608782E+06   3.5000E-06  gain        
+ p04075850gain          48378.2        550834.       -502456.       3.4000E-06  gain        
+ mb_error               0.00000       0.447600      -0.447600        0.000      error       
+
+ See file menom8_sens.res for more details of residuals in graph-ready format.
+
+ See file menom8_sens.seo for composite observation sensitivities.
+
+
+ Objective function ----->
+
+   Sum of squared weighted residuals (ie phi)                =   6289.6    
+   Contribution to phi from observation group "obs_network"  =   294.16    
+   Contribution to phi from observation group "obs_wells"    =   2405.7    
+   Contribution to phi from observation group "wcrs"         =   1495.8    
+   Contribution to phi from observation group "lakes"        =   192.32    
+   Contribution to phi from observation group "streamflow"   =   1634.5    
+   Contribution to phi from observation group "gain"         =   267.09    
+   Contribution to phi from observation group "error"        =   0.0000    
+
+
+ Correlation Coefficient ----->
+
+   Correlation coefficient                                   =  0.99985    
+
+
+ Analysis of residuals ----->
+
+   All residuals:-
+      Number of residuals with non-zero weight                       =   820
+      Mean value of non-zero weighted residuals                      =  0.1670    
+      Maximum weighted residual [observation "neopitf"]              =   18.33    
+      Minimum weighted residual [observation "partial_04077150"]     =  -21.75    
+      Standard variance of weighted residuals                        =   7.765    
+      Standard error of weighted residuals                           =   2.787    
+
+      Note: the above variance was obtained by dividing the objective 
+      function by the number of system degrees of freedom (ie. number of 
+      observations with non-zero weight plus number of prior information 
+      articles with non-zero weight minus the number of adjustable parameters.)
+      If the degrees of freedom is negative the divisor becomes 
+      the number of observations with non-zero weight plus the number of 
+      prior information items with non-zero weight.
+
+   Residuals for observation group "obs_network":-
+      Number of residuals with non-zero weight                       =     5
+      Mean value of non-zero weighted residuals                      =   3.923    
+      Maximum weighted residual [observation "gwobs_445052088552"]   =   10.35    
+      Minimum weighted residual [observation "gwobs_450705089020"]   =  -8.264    
+      "Variance" of weighted residuals                               =   58.83    
+      "Standard error" of weighted residuals                         =   7.670    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "obs_wells":-
+      Number of residuals with non-zero weight                       =    82
+      Mean value of non-zero weighted residuals                      =   3.033    
+      Maximum weighted residual [observation "neopitf"]              =   18.33    
+      Minimum weighted residual [observation "sh-0043"]              =  -5.597    
+      "Variance" of weighted residuals                               =   29.34    
+      "Standard error" of weighted residuals                         =   5.416    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "wcrs":-
+      Number of residuals with non-zero weight                       =   650
+      Mean value of non-zero weighted residuals                      = -0.3012    
+      Maximum weighted residual [observation "jc231_verygood"]       =   6.783    
+      Minimum weighted residual [observation "nw186_verygood"]       =  -8.844    
+      "Variance" of weighted residuals                               =   2.301    
+      "Standard error" of weighted residuals                         =   1.517    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "lakes":-
+      Number of residuals with non-zero weight                       =    34
+      Mean value of non-zero weighted residuals                      = -8.7768E-02
+      Maximum weighted residual [observation "cott_lake"]            =   3.026    
+      Minimum weighted residual [observation "deep_basin_lake"]      =  -8.087    
+      "Variance" of weighted residuals                               =   5.657    
+      "Standard error" of weighted residuals                         =   2.378    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "streamflow":-
+      Number of residuals with non-zero weight                       =    40
+      Mean value of non-zero weighted residuals                      =   1.436    
+      Maximum weighted residual [observation "partial_04070600"]     =   10.91    
+      Minimum weighted residual [observation "partial_04077150"]     =  -21.75    
+      "Variance" of weighted residuals                               =   40.86    
+      "Standard error" of weighted residuals                         =   6.392    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "gain":-
+      Number of residuals with non-zero weight                       =     9
+      Mean value of non-zero weighted residuals                      =   1.112    
+      Maximum weighted residual [observation "p04076080gain"]        =   11.63    
+      Minimum weighted residual [observation "p04075350gain"]        =  -5.025    
+      "Variance" of weighted residuals                               =   29.68    
+      "Standard error" of weighted residuals                         =   5.448    
+
+      Note: the above "variance" was obtained by dividing the sum of squared 
+      residuals by the number of items with non-zero weight.
+
+   Residuals for observation group "error":-
+      Number of residuals with non-zero weight                       =     0
+ 
+
+ K-L information statistics ----->
+
+ 
+   AIC   =   1692.620    
+   AICC  =   1692.947    
+   BIC   =   1744.422    
+   KIC   =   1692.692    
+
+ Parameter covariance matrix ----->
+
+              kglobal_____ knorthwest__ koutwash____ kantigo_mult k_endmoraine kgrmoraine__ rregional___ cdrainage___
+              cseepage____ cstream_____
+ 
+ kglobal_____   2.6251E-03   4.8688E-04   7.3989E-04   4.0449E-03  -1.3018E-04   3.0183E-04   1.3449E-03   3.5147E-03
+               -1.8347E-03   3.2106E-03
+ 
+ knorthwest__   4.8688E-04   1.9170E-03   1.2958E-03  -1.8263E-03   4.9205E-04   3.9765E-04   1.8149E-03  -4.1995E-03
+               -7.8066E-04   8.8473E-03
+ 
+ koutwash____   7.3989E-04   1.2958E-03   2.2423E-03   3.5932E-03   5.4770E-05   1.6001E-04   2.0903E-03   4.0230E-03
+               -1.8162E-03   9.6024E-03
+ 
+ kantigo_mult   4.0449E-03  -1.8263E-03   3.5932E-03   0.7185      -4.0558E-02   3.5957E-03   1.5490E-02  -0.1375    
+               -3.6144E-03   3.7115E-03
+ 
+ k_endmoraine  -1.3018E-04   4.9205E-04   5.4770E-05  -4.0558E-02   4.5875E-03  -1.0359E-04  -4.3839E-04   6.8395E-04
+                7.1539E-04   2.1048E-03
+ 
+ kgrmoraine__   3.0183E-04   3.9765E-04   1.6001E-04   3.5957E-03  -1.0359E-04   3.0645E-03   1.1851E-03  -1.0295E-02
+               -8.7070E-03   2.1421E-03
+ 
+ rregional___   1.3449E-03   1.8149E-03   2.0903E-03   1.5490E-02  -4.3839E-04   1.1851E-03   5.0266E-03  -2.8301E-02
+               -1.5829E-03   9.4170E-03
+ 
+ cdrainage___   3.5147E-03  -4.1995E-03   4.0230E-03  -0.1375       6.8395E-04  -1.0295E-02  -2.8301E-02    3.064    
+               -0.3619      -0.2557    
+ 
+ cseepage____  -1.8347E-03  -7.8066E-04  -1.8162E-03  -3.6144E-03   7.1539E-04  -8.7070E-03  -1.5829E-03  -0.3619    
+                0.6306       2.9269E-02
+ 
+ cstream_____   3.2106E-03   8.8473E-03   9.6024E-03   3.7115E-03   2.1048E-03   2.1421E-03   9.4170E-03  -0.2557    
+                2.9269E-02   0.1122    
+ 
+
+
+ Parameter correlation coefficient matrix ----->
+
+              kglobal_____ knorthwest__ koutwash____ kantigo_mult k_endmoraine kgrmoraine__ rregional___ cdrainage___
+              cseepage____ cstream_____
+ 
+ kglobal_____    1.000       0.2170       0.3050       9.3138E-02  -3.7514E-02   0.1064       0.3702       3.9187E-02
+               -4.5092E-02   0.1871    
+ 
+ knorthwest__   0.2170        1.000       0.6250      -4.9211E-02   0.1659       0.1641       0.5847      -5.4791E-02
+               -2.2452E-02   0.6032    
+ 
+ koutwash____   0.3050       0.6250        1.000       8.9523E-02   1.7077E-02   6.1040E-02   0.6226       4.8533E-02
+               -4.8299E-02   0.6054    
+ 
+ kantigo_mult   9.3138E-02  -4.9211E-02   8.9523E-02    1.000      -0.7064       7.6630E-02   0.2578      -9.2670E-02
+               -5.3696E-03   1.3071E-02
+ 
+ k_endmoraine  -3.7514E-02   0.1659       1.7077E-02  -0.7064        1.000      -2.7629E-02  -9.1292E-02   5.7685E-03
+                1.3300E-02   9.2766E-02
+ 
+ kgrmoraine__   0.1064       0.1641       6.1040E-02   7.6630E-02  -2.7629E-02    1.000       0.3019      -0.1062    
+               -0.1981       0.1155    
+ 
+ rregional___   0.3702       0.5847       0.6226       0.2578      -9.1292E-02   0.3019        1.000      -0.2280    
+               -2.8113E-02   0.3965    
+ 
+ cdrainage___   3.9187E-02  -5.4791E-02   4.8533E-02  -9.2670E-02   5.7685E-03  -0.1062      -0.2280        1.000    
+               -0.2603      -0.4360    
+ 
+ cseepage____  -4.5092E-02  -2.2452E-02  -4.8299E-02  -5.3696E-03   1.3300E-02  -0.1981      -2.8113E-02  -0.2603    
+                 1.000       0.1100    
+ 
+ cstream_____   0.1871       0.6032       0.6054       1.3071E-02   9.2766E-02   0.1155       0.3965      -0.4360    
+                0.1100        1.000    
+ 
+
+
+ Normalized eigenvectors of parameter covariance matrix ----->
+
+               Vector_1     Vector_2     Vector_3     Vector_4     Vector_5     Vector_6     Vector_7     Vector_8   
+               Vector_9     Vector_10  
+ 
+ kglobal_____  -7.1304E-02  -8.4673E-02  -0.8114       0.4012       0.2376      -0.3318      -4.1356E-02  -1.1812E-03
+               -6.1361E-03  -1.0215E-03
+ 
+ knorthwest__  -0.3740      -0.8559       0.1839      -0.1294       5.7629E-02  -0.2543      -9.4765E-02  -3.2904E-03
+                2.6457E-03   1.4895E-03
+ 
+ koutwash____  -0.7779       0.4857       0.1866      -9.5377E-03   0.2068      -0.2625      -0.1117      -1.3766E-03
+               -5.4015E-03  -1.0137E-03
+ 
+ kantigo_mult  -3.1941E-03  -2.4879E-03  -2.4073E-02  -5.3802E-02   2.7577E-03   1.5970E-02  -1.1619E-02   0.1650    
+               -0.9827       5.5742E-02
+ 
+ k_endmoraine   2.2392E-02   7.7928E-02  -0.3934      -0.9048       9.0192E-02  -9.0919E-02  -1.8854E-02  -1.0407E-02
+                5.6104E-02  -8.4595E-04
+ 
+ kgrmoraine__  -0.1317       6.1528E-02  -0.1359       5.7028E-04  -0.9273      -0.3163      -1.5217E-02  -1.6579E-02
+               -6.6067E-03   2.9546E-03
+ 
+ rregional___   0.4736       0.1191       0.3141      -1.7872E-02   0.1664      -0.7919      -8.4569E-02  -5.9757E-03
+               -2.0434E-02   9.3259E-03
+ 
+ cdrainage___   1.1563E-02   1.0874E-03   4.2531E-04  -1.6394E-03  -6.8629E-03   3.1244E-03  -8.6415E-02   0.1486    
+               -2.9806E-02  -0.9846    
+ 
+ cseepage____  -1.0144E-03   9.2120E-04  -1.1154E-03  -4.0714E-05  -1.3241E-02  -1.3154E-02  -5.9879E-03   0.9746    
+                0.1715       0.1425    
+ 
+ cstream_____   8.7585E-02   1.8151E-02  -2.1971E-02   1.6386E-02  -4.0191E-02   0.1431      -0.9805      -1.9507E-02
+                1.4630E-02   8.4420E-02
+ 
+
+
+ Eigenvalues ----->
+
+                5.5727E-04   7.1727E-04   2.0141E-03   2.2591E-03   2.6059E-03   5.3605E-03   9.2878E-02   0.5744    
+                0.7176        3.147    

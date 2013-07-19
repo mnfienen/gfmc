@@ -32,4 +32,4 @@ P-E_________=~P-E_________~
 NeopitLagoon = (((~P-E_________~ * 688870.68 + 11563.37) / 688870.68) + ~Rregional___~) * -1
 Kantigo_____ = ~Kantigo_mult~ * ~K_endmoraine~
 * template files
-menom8MC.tpl menom8.DAT
+menom8mc.tpl menom8.dat
