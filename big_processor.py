@@ -7,7 +7,7 @@ def prep_and_delete(scenarios):
 	    localdir = re.sub('LdF_','',cscen)
 	    cpath = os.path.join(os.getcwd(),localdir)
 	    if not os.path.exists(os.path.join(cpath,'results')):
-		os.mkdir(os.path.join(cpath,'results'))
+			os.mkdir(os.path.join(cpath,'results'))
 	    files = glob.glob(os.path.join(cpath,'results','*'))
 	    print 'removing all contents of %s ' %(os.path.join(cpath,'results'))
 	    for f in files:
@@ -46,7 +46,7 @@ for i,cscen in enumerate(scenarios):
         localdir = re.sub('LdF_','',cscen)
         cpath = os.path.join(os.getcwd(),localdir)
         print 'retrieving files from %s' %(cscen)
-        os.system('scp mnfienen@igsarmewfsM000.er.usgs.gov:MONTE_CARLO_3_2013/%s/results/* %s' %(cscen,os.path.join(cpath,'results')))
+        os.system('scp mnfienen@igsarmewfsM000.er.usgs.gov:MONTE_CARLO_MENOM/%s/results/* %s' %(cscen,os.path.join(cpath,'results')))
 # now run the processing 
     if parse_and_proc:
 	homedir = os.getcwd()

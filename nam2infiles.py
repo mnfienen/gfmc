@@ -67,6 +67,16 @@ for cscen in scenarios:
 	    ofpinfile.write('%s #plumefile\n' %(namdata['eleoutfilename']))
 	    ofpinfile.write('PHI_records.dat     # PHI file\n' )
 	    ofpinfile.write("e                  # 'p' for point file, 'e' for element file\n")
+	    ofpinfile.close()	  
+	elif int(namdata['method']) == 1:
+	    cinfile = '%s.in' %(namdata['AcrOutFileName'][:-4])
+	    ofp.write('%s ' %(cinfile))
+	    ofpinfile = open(os.path.join(cpath,cinfile),'w')
+	    ofpinfile.write('%s #plumefile\n' %(namdata['AcrOutFileName']))
+	    ofpinfile.write('PHI_records.dat     # PHI file\n' )
+	    ofpinfile.write("p                  # 'p' for point file, 'e' for element file\n")
 	    ofpinfile.close()	    
+		
+	
     ofp.write('\n')
 ofp.close()
