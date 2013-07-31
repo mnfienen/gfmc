@@ -1,4 +1,4 @@
-ptf !
+  ptf !
 * Written by GFLOW for Windows 2.1.6
  error error.log
  yes
