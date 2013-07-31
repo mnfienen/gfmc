@@ -5,4 +5,4 @@ method = 1				# Method: 1 for end point analysis for ZOC to wells; 2 for termina
 datfilename = menom8.dat		# Name of GFLOW dat file
 PTHfilename = MENOM8.PTH		# Name of GFLOW pathline file
 AcrWellFileName = menom8wells.dat	# File with the GFLOW ID for the wells of interest
-AcrOutFileName = menom8acrs.out		# Output file with capture/not capture (1 or 0) values for each realization
+AcrOutFileName = menom8acrs.out		# Output file with capture/not capture (1 or 0) values for each realization.
