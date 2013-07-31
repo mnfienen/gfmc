@@ -1,4 +1,4 @@
-Shapefiles = yes			# Whether or not shapefiles are desired. ASCII output files are always produced. Shapefiles will use the names provided for the ASCII outfiles.
+Shapefiles = no			# Whether or not shapefiles are desired. ASCII output files are always produced. Shapefiles will use the names provided for the ASCII outfiles.
 RanVarFileName = menom8.ranvar		# Name of the file containing all the parameter realizations
 PSTfilename = menom8mc.pst		# Base PST control file
 method = 1				# Method: 1 for end point analysis for ZOC to wells; 2 for terminal element analysis for a plume; 3 for plume pathline distribution; 4 for both 2 & 3
