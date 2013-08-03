@@ -7510,7 +7510,7 @@ slurry outside  0.0000000E+00 1.0000000E+00 2.0000000E-01 0.0000000E+00 HB_00079
  window -146437.80 -56745.01 525578.67 316090.85 
  quit 
  time 0
- solve conjunctive 5 3 1 1
+ solve conjunctive 30 3 1 1
  
  save Menom8
 y

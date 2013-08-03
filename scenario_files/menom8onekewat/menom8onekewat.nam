@@ -1,0 +1,8 @@
+Shapefiles = no			# Whether or not shapefiles are desired. ASCII output files are always produced. Shapefiles will use the names provided for the ASCII outfiles.
+RanVarFileName = menom8.ranvar		# Name of the file containing all the parameter realizations
+PSTfilename = menom8onekewat.pst		# Base PST control file
+method = 1				# Method: 1 for end point analysis for ZOC to wells; 2 for terminal element analysis for a plume; 3 for plume pathline distribution; 4 for both 2 & 3
+datfilename = menom8.dat		# Name of GFLOW dat file
+PTHfilename = MENOM8.PTH		# Name of GFLOW pathline file
+AcrWellFileName = menom8wells.dat	# File with the GFLOW ID for the wells of interest
+AcrOutFileName = menom8onekewat.out		# Output file with capture/not capture (1 or 0) values for each realization
