@@ -116,16 +116,26 @@ def get_grid_nodes(grid_file):
 
 def check_node_spacing(nodes):
 	Xcoord = nodes[:,0] # return all (:) from the 0th column
-	Ycoord = nodes[:,1] # return all from the 1th column
+	Xcoord = np.multiply(Xcoord, 10000) # multiply float array by 100x
+	Xcoord = np.floor(Xcoord) # round down to nearest integer.  This eliminates comparison problems with float data types
 	Xcoord = np.unique(Xcoord)  # only keep unique values (don't retain duplicates in the array)
+	Ycoord = nodes[:,1] # return all from the 1th column
+	Ycoord = np.multiply(Ycoord, 10000)
+	Ycoord = np.floor(Ycoord)	
 	Ycoord = np.unique(Ycoord)
 	dX = np.diff(Xcoord) # compute the difference between each value in the array (could be many values if non-uniform spacing)
 	dY = np.diff(Ycoord)
 	uniformX = np.unique(dX) # only keep unique values
 	uniformY = np.unique(dY)
 	if ((len(uniformX) > 1) or (len(uniformY) > 1)):  #if more than one spacing in x or y
-		print "There is a problem with your grid. It's not uniformly spaced"
-	else: nodespace = uniformX[0]  # ensures grid has uniform spacing
+		print ("There is a problem with your grid. It's not uniformly spaced. \n"
+		       "One solution may be to reduce the precision of the coordinates, \n"
+		       "or convert the grid coordinates to integer values."
+	else: 
+		nodespace = uniformX[0] * 0.0001  # return the difference value back to the original magnitude
+		# ensures grid has uniform spacing to 0.001 place.  That is, the np.multiply functions allow for non-integer grids.
+		
+		#nodespace = uniformX[0]  
 	return(nodespace)
 
 def index_grid_nodes(nodes):
