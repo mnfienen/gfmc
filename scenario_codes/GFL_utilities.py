@@ -130,7 +130,7 @@ def check_node_spacing(nodes):
 	if ((len(uniformX) > 1) or (len(uniformY) > 1)):  #if more than one spacing in x or y
 		print ("There is a problem with your grid. It's not uniformly spaced. \n"
 		       "One solution may be to reduce the precision of the coordinates, \n"
-		       "or convert the grid coordinates to integer values."
+		       "or convert the grid coordinates to integer values.")
 	else: 
 		nodespace = uniformX[0] * 0.0001  # return the difference value back to the original magnitude
 		# ensures grid has uniform spacing to 0.001 place.  That is, the np.multiply functions allow for non-integer grids.
