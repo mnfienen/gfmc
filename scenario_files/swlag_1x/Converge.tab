@@ -1,0 +1,40 @@
+* This file, converge.tab, controls the number of iterations for groundwater flow solutions   
+* by providing convergence criteria for the various types of analytic elements. These        
+* criteria are values for "maximum errors in boundary conditions" (as reported in the          
+* message.log file) that should not be exceeded. If all errors are smaller than those listed   
+* in this file, the iteration process is aborted and the solutions is considered valid.
+*
+* NOTE: There is no critera for convergence of the surface water solution. The user must 
+* set the "min. iterations" in this file at 5 or higher when conjunctive water and                  
+* groundwater solutions are in effect. It remains the responsibility of the user to check the 
+* surface water solution (see message.log file) for adequate convergence.
+*
+* NOTE: All lines below must be present in that order.
+* Do not change element type names!
+*
+*
+minimum iterations                             3
+reference point                          0.00001
+linesinks no_resistance             0.00001
+linesinks with_resistance           0.001
+inhomogeneity domains              0.001
+horizontal_barrier no_flow           0.001
+horizontal_barrier resistance      0.0001
+wells 3D                                     0.01
+wells 2D                                     0.0001
+lake waterbalance                     0.1
+quit
+
+
+
+
+
+
+
+
+
+
+
+
+
+

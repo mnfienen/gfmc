@@ -1,0 +1,8 @@
+Shapefiles = no			# Whether or not shapefiles are desired. ASCII output files are always produced. Shapefiles will use the names provided for the ASCII outfiles.
+RanVarFileName = ldf18b.ranvar		# Name of the file containing all the parameter realizations
+PSTfilename = SWlag_0_2x.pst		# Base PST control file
+method = 3				# Method: 1 for end point analysis for ZOC to wells; 2 for terminal element analysis for a plume; 3 for plume pathline distribution; 4 for both 2 & 3
+datfilename = LF18LGbk.tpl		# Name of GFLOW dat file
+PTHfilename = LF18LGBK.PTH	# Name of GFLOW pathline file
+gridfilename = SWlag_5x_grid.dat # For methods 3 and 4 only. Name of the file containing grid nodes for evaluating the spatial extent of pathlines.
+gridoutfilename = SWlag_p0_2x_g5x.out # For methods 3 and 4 only. Name of the output file that will contain the coordinates and a flag (0 or 1) indicating whether a pathline traveled through each grid cell.
