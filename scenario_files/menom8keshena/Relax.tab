@@ -2,8 +2,12 @@
 *
 * * comment statement (* in first column)
 * * iteration #     relaxation factor
-1                   0.3
-10                  0.5
+1                   0.5
+5                   0.6
+9                   0.7
+12                 0.8
+15                 0.9
+19                 1.0
 quit
 *
 *      The effect of this file is as follows: During the first 5 iterations a (under)relaxation factor
@@ -13,4 +17,9 @@ quit
 *
 *1 1.0
 *quit
+
+
+
+
+
 

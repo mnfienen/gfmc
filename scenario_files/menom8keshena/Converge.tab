@@ -16,12 +16,19 @@
 minimum iterations                             3
 reference point                          0.00001
 linesinks no_resistance             0.00001
-linesinks with_resistance           0.01
+linesinks with_resistance           0.9
 inhomogeneity domains              0.001
-horizontal_barrier no_flow           0.001
-horizontal_barrier resistance      0.0001
+horizontal_barrier no_flow           0.01
+horizontal_barrier resistance      0.001
 wells 3D                                     0.01
 wells 2D                                     0.0001
 lake waterbalance                     0.1
 quit
+
+
+
+
+
+
+
 
