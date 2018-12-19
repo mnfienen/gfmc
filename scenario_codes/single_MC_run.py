@@ -5,6 +5,8 @@ from MC_inputs import MC_PST, SelectionFail
 import os
 import datetime as dt
 
+# to use:  python single_MC_run.py scen# namfile.nam
+# scen# is an integer that corresponds to a scenario in the *.randvar file listed in the *.nam file
 
 # get the current realization number from the command line (argv)
 sel_real = int(sys.argv[1])
