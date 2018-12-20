@@ -1,0 +1,18 @@
+Write_Shapefiles = yes			# Whether or not shapefiles are desired. ASCII output files are always produced. Shapefiles will use the names provided for the ASCII outfiles.
+datfilename = LF20.dat			# Name of GFLOW dat file
+Shapefile_name = D:\PFJDATA\Projects\GW_team\LdF\2019_lagoon\MCsetup\arc_n_scripts\analysisextent.shp 		# name of the shapefile for the desired particle grid. NOTE: Datum should be NAD27 and UTM coordinates.
+outfilename = lagoon2019_Grid.dat  		# output analysis grid filename.  Note: output is a grid of X,Y in meters.
+Distance_units = m			# enter "ft" or "m" for step size below, or for GFLOW coordinates (m) if specify "Step_Multiplier" below.
+Step_size = 10.0
+#Step_multiplier = 1			# Distance between points, in specified units (m or ft)
+# Instead of "Step_size", you could alternatively indicate the number of multiples "Step_multiplier" of the particle solution step size. Note that step size is typically in model coordinates (UTM and meters). Testing has shown that using a synthetic grid spacing similar to particle spacing (which I suggest matching to GFLOW ptl step size) is a reasonably good protocol, as results are sensitive to particle density and grid resolution.
+
+# Acceptable key words are: 		Acceptable responses are:
+#
+# Write_shapefiles			yes, no
+# datfilename				name of the GFLOW dat file
+# Shapefile_name			name of the polygon shapefile (UTM NAD27) overwhich particles will be generated
+# outfilename				name of the outputfile.  Shapefiles, if written, will use the same name.
+# Distance_units			ft, feet, m, meter, meters...depending on specified step_size or coordinate units of the model.
+# Step_multiplier			any non-negative number [omit if "step_size" is specified]. NOTE: the program rounds down to the nearest integer meter to avoid numerical precission errors later on.
+# Step_size				any non-negative number [omit if "step_multiplier" is specified]

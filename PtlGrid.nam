@@ -1,0 +1,21 @@
+Write_Shapefiles = yes			# Whether or not shapefiles are desired. ASCII output files are always produced. Shapefiles will use the names provided for the ASCII outfiles.
+datfilename = LF20.dat			# Name of GFLOW dat file
+Shapefile_name = D:\PFJDATA\Projects\GW_team\LdF\2019_lagoon\MCsetup\arc_n_scripts\New_lagoon_GFLOW.shp 		# name of the shapefile for the desired particle grid. NOTE: Datum should be NAD27 and UTM coordinates for GFLOW.
+outfilename = lagoon2019_PTLs.dat  	# output analysis grid filename.  Note: output is a grid of X,Y in meters.
+Distance_units = m			# enter "ft" or "m" for particle spacing below
+Particle_spacing = 10.0			# Distance between points, in computational units (m or ft)
+Direction = forward			# Specify "forward" or "backward" for the desired particle direction
+Elevation_units = ft			# "ft" or "m"
+Elevation = 3500			# Starting elevation. For forward from watertable, use a # > highest sim head.
+
+# Acceptable key words are: 		Acceptable responses are:
+#
+# Write_shapefiles			yes, no
+# datfilename				name of the GFLOW dat file
+# Shapefile_name			name of the polygon shapefile (UTM NAD27) overwhich particles will be generated
+# outfilename				name of the outputfile.  Shapefiles, if written, will use the same name.
+# Distance_units			ft, feet, m, meter, meters
+# Particle_spacing			any non-negative number
+# Direction				forward, backward
+# Elevation_units			ft, feet, m, meter, meters
+# Elevation				any non-negative number. For forward from watertable, use a # > highest sim head.
