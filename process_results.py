@@ -71,18 +71,18 @@ if points_or_elements == 'p':
     outshape = outfilename[:-4] + 'shape_pts'
 	#pshape = shapefile.Writer(shapefile.POINT)        #set up the point shapefile
     pshape = shapefile.Writer(outshape, shapefile.POINT)        #set up the point shapefile
-	pshape.field('plume')
+    pshape.field('plume')
     for i in np.arange(len(X)):
         pshape.point(X[i],Y[i])    # write to the shapefile
         pshape.record(cprob[i])
     # save the shapefile
 	#outshape = outfilename[:-4] + 'shape_pts'
     #pshape.save(outshape)
-	pshape.close()
+    pshape.close()
 else:
     outshape = outfilename[:-4] + 'shape_polylines'
 	#pshape = shapefile.Writer(shapefile.POLYLINE)        #set up the point shapefile
-	pshape = shapefile.Writer(eleoutshapename, shapefile.POLYLINE)        #set up the point shapefile
+    pshape = shapefile.Writer(eleoutshapename, shapefile.POLYLINE)        #set up the point shapefile
     pshape.field('elname')
     pshape.field('plume')
     indat = open('results/%s_%d' %(outfilename,allreals[0]),'r').readlines()
@@ -103,7 +103,7 @@ else:
         pshape.record(ElName[i],cprob[i])   
     #outshape = outfilename[:-4] + 'shape_polylines'
     #pshape.save(outshape)
-	pshape.close()
+    pshape.close()
     
 # plot the convergence of probability discrepancies
 alldiff = np.array(alldiff)
