@@ -68,16 +68,21 @@ for i in allreals:
         continue
 # make a shapefile of the probability maps
 if points_or_elements == 'p':
-    pshape = shapefile.Writer(shapefile.POINT)        #set up the point shapefile
-    pshape.field('plume')
+    outshape = outfilename[:-4] + 'shape_pts'
+	#pshape = shapefile.Writer(shapefile.POINT)        #set up the point shapefile
+    pshape = shapefile.Writer(outshape, shapefile.POINT)        #set up the point shapefile
+	pshape.field('plume')
     for i in np.arange(len(X)):
         pshape.point(X[i],Y[i])    # write to the shapefile
         pshape.record(cprob[i])
     # save the shapefile
-    outshape = outfilename[:-4] + 'shape_pts'
-    pshape.save(outshape)
+	#outshape = outfilename[:-4] + 'shape_pts'
+    #pshape.save(outshape)
+	pshape.close()
 else:
-    pshape = shapefile.Writer(shapefile.POLYLINE)        #set up the point shapefile
+    outshape = outfilename[:-4] + 'shape_polylines'
+	#pshape = shapefile.Writer(shapefile.POLYLINE)        #set up the point shapefile
+	pshape = shapefile.Writer(eleoutshapename, shapefile.POLYLINE)        #set up the point shapefile
     pshape.field('elname')
     pshape.field('plume')
     indat = open('results/%s_%d' %(outfilename,allreals[0]),'r').readlines()
@@ -96,8 +101,9 @@ else:
         ElName.append(tmp[4].strip())
         pshape.line([[[X1[i],Y1[i]],[X2[i],Y2[i]]]])
         pshape.record(ElName[i],cprob[i])   
-    outshape = outfilename[:-4] + 'shape_polylines'
-    pshape.save(outshape)
+    #outshape = outfilename[:-4] + 'shape_polylines'
+    #pshape.save(outshape)
+	pshape.close()
     
 # plot the convergence of probability discrepancies
 alldiff = np.array(alldiff)
